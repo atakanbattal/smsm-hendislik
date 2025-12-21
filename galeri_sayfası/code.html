@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeri - SMS İNOVASYON MÜHENDİSLİK</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#edbc1d",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221e10",
+                        "surface-dark": "#2d2818", // Slightly lighter for cards
+                        "secondary-text": "#a09b8c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Masonry support for older browsers if needed, though Tailwind columns work well */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .break-inside-avoid {
+            break-inside: avoid;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-[#221e11]/95 backdrop-blur-sm border-b border-[#483f23]">
+<div class="layout-container max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo Section -->
+<div class="flex items-center gap-3 text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">SMS İNOVASYON</h2>
+<span class="text-xs text-primary/80 font-medium tracking-widest uppercase">Mühendislik</span>
+</div>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden lg:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-semibold" href="#">Ana Sayfa</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-semibold" href="#">Kurumsal</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-semibold" href="#">Hizmetler</a>
+<a class="text-primary transition-colors text-sm font-semibold" href="#">Galeri</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-semibold" href="#">İletişim</a>
+</nav>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 transition-colors text-background-dark text-sm font-bold">
+                        Teklif Al
+                    </button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section (Compact) -->
+<section class="relative w-full h-[400px] flex items-center justify-center overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background-dark/50 to-background-dark z-10"></div>
+<img alt="Industrial engineering facility background" class="w-full h-full object-cover opacity-60" data-alt="Blurred industrial facility background with machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA65vwqJumTUjppTOuEAmXOWsGtGMMZ802sYJMfBrTA7SScFB9YVJo_Zz_uZv8qSbCqjHN0Q7VvyUXuGCKhcEhs4ZhuofkPmfI_t4TCmbwz8bXU59ALxY9e6ZRO8sFcJ7_2JWtloLAAsppdSCgfuqFkeQqC8g2QJ-hgl1-v5L5eJeZ7HyetANR2sGbawSZTvvcWpkPxy7zT4ixt8VNJWwvb_-uUdqc_GfldtQVxvD6J2feRCH8RLpkgBbrTFpVhP6ONEMnsZriqXyZk"/>
+</div>
+<!-- Content -->
+<div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-10">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider mb-4">
+                    Portfolyo
+                </span>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">
+                    Projelerimiz ve Faaliyetlerimiz
+                </h1>
+<p class="text-lg text-gray-300 max-w-2xl mx-auto font-light">
+                    Mühendislik çözümlerimizden, saha operasyonlarımızdan ve kalite kontrol süreçlerimizden seçkin kareler.
+                </p>
+</div>
+</section>
+<!-- Filter & Gallery Container -->
+<section class="py-12 bg-background-light dark:bg-background-dark">
+<div class="layout-container max-w-[1200px] mx-auto px-4 md:px-8">
+<!-- Filter Chips -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
+<div class="flex gap-2 flex-wrap justify-center md:justify-start">
+<!-- Active Chip -->
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-primary text-background-dark shadow-lg shadow-primary/20 transition-all hover:scale-105">
+<span class="text-sm font-bold">Tümü</span>
+</button>
+<!-- Inactive Chips -->
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-dark border border-[#483f23] text-gray-300 hover:text-white hover:border-primary/50 transition-all">
+<span class="text-sm font-medium">NDT Hizmetleri</span>
+</button>
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-dark border border-[#483f23] text-gray-300 hover:text-white hover:border-primary/50 transition-all">
+<span class="text-sm font-medium">ADR &amp; Tanker</span>
+</button>
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-dark border border-[#483f23] text-gray-300 hover:text-white hover:border-primary/50 transition-all">
+<span class="text-sm font-medium">Kaynak Müh.</span>
+</button>
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-dark border border-[#483f23] text-gray-300 hover:text-white hover:border-primary/50 transition-all">
+<span class="text-sm font-medium">Demiryolu</span>
+</button>
+</div>
+<!-- Sort Dropdown (Optional but good for UX) -->
+<div class="hidden md:flex items-center gap-2 text-sm text-gray-400">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+<span>Sıralama: Yeniden Eskiye</span>
+</div>
+</div>
+<!-- Masonry Gallery Grid -->
+<div class="masonry-grid pb-8">
+<!-- Item 1: NDT -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Ultrasonik test uygulaması" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Technician using ultrasonic testing device on metal pipe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmMhmeaerS_e4MMZNnmdpg0N13f6I-9unyCcDhMF6ZPtyUK3kYwLtQ-Srl0PL16SDi-C38BO9GmVjAl0H7sYlfytuz8qqC2EX3by5YF-fcJOjvZyvc5-PIFF1ETAKX1Izo-8n7qdGQDqEDgxX3saDRbmklv1Br1f40_37Qq5MGX2dZEEiARUOaXdVxD56NgC7NOK046M7lyuEp5CR5obvb_bdPlfIjYabA7kFZCX4IwsmxctOyCastMr6lKHnTSe261l-A9rqmaU8V"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">NDT Hizmetleri</span>
+<h3 class="text-white text-lg font-bold leading-tight">Ultrasonik Test Uygulaması</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Vertical Image (Portrait) -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-[3/4] overflow-hidden">
+<img alt="Yüksek irtifa inşaat denetimi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Construction worker inspecting steel beams at height" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXLr4LLQeKiQ1wX1mq1NsK2CcVEgAouCh_VD3hM-Sz9DVMyppFZLF27ndQ4cqoVnMr25Js1G7Aa1pmXdqe5dA2Skdjt0pQZ9B2q1mHcN5jVTM5JhFS8JbMRTcLI2ML_huaZtUq5x5h5SgrroyfA2I1IZN4MkjcXqWTfKPbY6LcY5F4vCdwmYY30s-Ce0sCr_IvZDIENIIAc0UmzfsbUQ8dku6Qrpy9z05V8V-Brw-96GX_1FN0k1bh40RLkpPzq5dJied2qJnFnsin"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Saha Operasyon</span>
+<h3 class="text-white text-lg font-bold leading-tight">Yüksek İrtifa Yapı Denetimi</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Welding -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-video overflow-hidden">
+<img alt="Robotik kaynak uygulaması" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of robotic welding sparks flying" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf54HAADKqUoSzQ6myIs3gEKTb_uvr-BpLq0MEqxG4juo5ExLNPGVQrlgyiHQZ5YA9biy0EKjBttxOb06HAnpdev0Q5uiiEzWwW68yBMtiz0bGTMgQ76Jgq_N1Exga2SKn5TZrwN8SNbDX4DxaLW1g_J9VFhdIB2B7Fgus7hoBQW13F2feR_B9zNw5D0Xxta98HdQWHBxFD1ppcgU0OfGpRtD8oaNoP3wwZ7RQZB-Q06vP5mI0E2KYxhC-_VH4z814Lkcx3q9D-baQ"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Kaynak Mühendisliği</span>
+<h3 class="text-white text-lg font-bold leading-tight">Robotik Kaynak Kontrolü</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Item 4: Railway -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Demiryolu ray hattı" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Perspective shot of railway tracks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMYywL4GkTdt6xIrxA-5TjSlBUorCCVketlSFUQOLXCuN7zwHv26jIXHOyjajugk8XuIsmaiBAweXIh2P52Vwlep_unFXKvSudWKN-EP8WEqynI2Eqf-YlF-9if4ZNrS3igLLc6qTzG2caIDcoN0CEXoMNTEGuV1PJ2NVYodz9gptX0gv7wTdF2ifmkrz3-1bdaQpZfPwv6eIEFYq00oxIjzK05FAFBcWVk_8bRBS_KHUQSG9-7bKG4tFAO4Wym1gJOUt8g9egRVs"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Demiryolu &amp; Altyapı</span>
+<h3 class="text-white text-lg font-bold leading-tight">Ray Hattı Denetimi</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Item 5: Tanker -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Endüstriyel tankerler" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Industrial fuel tanks in a refinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVS4_oxzRPurCknUcP3d0oDq-EIB2TzR-tYTHYofOZmbHPgscoPjY72ysjv1VvoSAFy2k2sDyOMO6bTqWQADsm2efHP1f5xxJsXu4Yg8aZR5xE97Wf6znHQ6CjZjKeVLxESDPnn2WfEmHQNlyDF7qZ6HnedqLcN4BvLfizrcurrx65LxGgVDjqYcGGS9RvPv9NiUiOD-Yk_gYj8U7YLWqdEKecjEGNij5RdER1Z6J-znrSD_x4pO7RIxTWppHyeFsWczpYcErkPl1"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">ADR &amp; Tanker</span>
+<h3 class="text-white text-lg font-bold leading-tight">Basınçlı Kap Muayenesi</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Item 6: Lab -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-[3/4] overflow-hidden">
+<img alt="Laboratuvar analizleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Scientist analyzing samples in a lab environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCchEwbEARRi-N2RLvro-zb0kakoWNTWohEgi1em-W18iHcWJOXDGiWsygLDVkxbxgeve4D07I1TN960ZlOTB98poM83hZg2eoo6YApi09r6BVK_eIi3yeeKnDevyqKJRYStqR5v-dD6b0jvEZMXkPDV8Lghfk7aSrfXApg30e7Ct0PcYVwmzZ9V4B5Jt9u9fWSaPHzwqS79Gdl5xwNz_ToRAQbGJHikbBRkt-WT1GYQ9Ydp9yLSYz9vrIbu3DcpxUUYSlpHrHNbYyX"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Laboratuvar</span>
+<h3 class="text-white text-lg font-bold leading-tight">Malzeme Analizi ve Raporlama</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Item 7: Drone -->
+<div class="break-inside-avoid mb-6 group relative overflow-hidden rounded-xl bg-surface-dark shadow-xl border border-[#3a3528]">
+<div class="aspect-video overflow-hidden">
+<img alt="Drone ile denetim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Industrial drone hovering for inspection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaMRAgyctH6HbDEp3vd5K8CGDvnE67k3Q1nuBAdacVe5CJl3AoCAmic-PHzdf28ERPH76QMRAgMeCo2a14nxzMjxSRnqunhHLowzm5-6q0jPE50Uzdbb3Xf736JaNmTuGxZvgGO_O74OaC11hL7Bn_jISl4WWrt5rAxCdluzlebw_P6SOnYdpnuyWnL5VWmhB8ASJZo0YetkL-BaxeMHpJEIXbCrrOC815qBekpPxKk2DzSSCKxgfamRha6tzPURCgClE7m14y_62t"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">İnovasyon</span>
+<h3 class="text-white text-lg font-bold leading-tight">İHA Destekli Saha Kontrolü</h3>
+<button class="mt-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center mt-8">
+<button class="group flex items-center gap-2 px-6 py-3 rounded-lg border border-[#483f23] text-white hover:bg-[#3a3528] transition-colors">
+<span class="font-bold text-sm">Daha Fazla Göster</span>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative bg-[#221e11] py-20 px-4 overflow-hidden border-t border-[#3a3528]">
+<div class="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
+<!-- Abstract pattern background -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 bg-white rounded-full blur-[120px]"></div>
+</div>
+<div class="layout-container max-w-4xl mx-auto text-center relative z-10">
+<div class="mb-8">
+<span class="material-symbols-outlined text-6xl text-primary mb-4">engineering</span>
+<h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                        Projelerinizde Uzman Çözümler
+                    </h2>
+<p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                        Kalite ve güvenlik standartlarınızı en üst seviyeye taşımak için deneyimli mühendis kadromuzla yanınızdayız.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="w-full sm:w-auto h-14 px-8 bg-primary hover:bg-primary/90 text-background-dark text-base font-bold rounded-lg transition-all transform hover:scale-105 shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
+<span>Teklif İste</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto h-14 px-8 bg-transparent border border-[#483f23] hover:border-white text-white text-base font-bold rounded-lg transition-colors flex items-center justify-center">
+                        Bizimle İletişime Geçin
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1a170d] text-white pt-16 pb-8 border-t border-[#3a3528]">
+<div class="layout-container max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold">SMS İNOVASYON</h3>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Endüstriyel kalite kontrol, NDT hizmetleri ve mühendislik çözümlerinde güvenilir iş ortağınız.
+                    </p>
+</div>
+<!-- Links -->
+<div>
+<h4 class="text-primary font-bold mb-4 uppercase text-sm tracking-wider">Hızlı Erişim</h4>
+<ul class="flex flex-col gap-2 text-gray-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Ana Sayfa</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hakkımızda</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hizmetler</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Projeler</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h4 class="text-primary font-bold mb-4 uppercase text-sm tracking-wider">Hizmetler</h4>
+<ul class="flex flex-col gap-2 text-gray-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">NDT Muayene</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Kaynak Mühendisliği</a></li>
+<li><a class="hover:text-white transition-colors" href="#">ADR Tanker Kontrol</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Demiryolu Denetimi</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-primary font-bold mb-4 uppercase text-sm tracking-wider">İletişim</h4>
+<ul class="flex flex-col gap-3 text-gray-400 text-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span>Ostim OSB, Ankara, Türkiye</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">phone</span>
+<span>+90 (312) 000 00 00</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+<span>info@smsinovasyon.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#2d2818] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+<p>© 2023 SMS İnovasyon Mühendislik. Tüm hakları saklıdır.</p>
+<div class="flex gap-4">
+<a class="hover:text-white" href="#">Gizlilik Politikası</a>
+<a class="hover:text-white" href="#">Kullanım Şartları</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

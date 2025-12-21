@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>İletişim - SMS İNOVASYON</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#edbc1d",
+                        "primary-hover": "#dca80c",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221e11",
+                        "surface-dark": "#2c281b",
+                        "surface-light": "#ffffff",
+                        "border-dark": "#483f23",
+                        "border-light": "#e5e5e5",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .map-filter {
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+        .dark .map-filter {
+            filter: grayscale(100%) invert(10%) contrast(83%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-light dark:border-border-dark bg-surface-light dark:bg-background-dark/95 backdrop-blur-sm">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-4 flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">SMS İNOVASYON</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Ana Sayfa</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Hizmetler</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projeler</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Hakkımızda</a>
+<a class="text-sm font-medium text-primary" href="#">İletişim</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary-hover text-[#221e11] text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Teklif Al</span>
+</button>
+</div>
+<button class="lg:hidden text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col min-h-screen">
+<!-- Hero Section -->
+<section class="relative flex flex-col items-center justify-center py-20 px-4 sm:px-10 bg-cover bg-center bg-no-repeat min-h-[320px]" data-alt="Dark industrial engineering background with metallic textures" style='background-image: linear-gradient(rgba(34, 30, 17, 0.85) 0%, rgba(34, 30, 17, 0.95) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcD-OGlwrPgbXf1Xe8gkM_ULtj2PjQ6NhERPXDZryPImnHXGb9eaaowMU4k7MeInlNqwzfwqAwm949Kdj3pzk3EeeQeKsfoBahBjMzT-ukz-ssJiVOFAi4rfsc8F-Joox-UDqjIzegMJgOFFn2eOaz10CgqT-_m-ud_20rSELXwdyRL2tDdFEUvnu4sIR2iXFp_u56tTyvAGNdwBlIT5D2dqTd5slCaC9EQhO2p32zxp2_BoBUydfd2fHxIxRlUJny2hYmgVd5M7xE");'>
+<div class="max-w-[960px] text-center space-y-4">
+<h1 class="text-white text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em]">
+                    İletişime Geçin
+                </h1>
+<p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-light">
+                    Mühendislik çözümleri ve kalite kontrol süreçleriniz için profesyonel destek alın. Sorularınız için ekibimiz hazır.
+                </p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-10 py-12 sm:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+<!-- Left Column: Contact Info -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div>
+<h2 class="text-2xl font-bold mb-2 text-[#111418] dark:text-white">Bize Ulaşın</h2>
+<p class="text-gray-600 dark:text-gray-400">Projeleriniz hakkında detaylı bilgi almak veya iş birliği yapmak için aşağıdaki kanallardan bize ulaşabilirsiniz.</p>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Info Card 1 -->
+<div class="flex gap-4 items-start p-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-[#111418] dark:text-white mb-1">Telefon</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Hafta içi 09:00 - 18:00</p>
+<a class="text-base font-semibold text-primary hover:underline" href="tel:+902120000000">+90 212 000 00 00</a>
+</div>
+</div>
+<!-- Info Card 2 -->
+<div class="flex gap-4 items-start p-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-[#111418] dark:text-white mb-1">E-posta</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Her zaman bize yazabilirsiniz.</p>
+<a class="text-base font-semibold text-primary hover:underline" href="mailto:info@smsinovasyon.com">info@smsinovasyon.com</a>
+</div>
+</div>
+<!-- Info Card 3 -->
+<div class="flex gap-4 items-start p-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-[#111418] dark:text-white mb-1">Merkez Ofis</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                                    İkitelli OSB Mahallesi, 1. Cadde<br/>
+                                    No: 5, Başakşehir / İstanbul
+                                </p>
+</div>
+</div>
+</div>
+<!-- Working Hours -->
+<div class="mt-4 p-6 rounded-xl bg-[#2a261a] dark:bg-[#1a170d] border border-primary/20">
+<h3 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">schedule</span>
+                            Çalışma Saatleri
+                        </h3>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between border-b border-primary/10 pb-2">
+<span class="text-white">Pazartesi - Cuma</span>
+<span class="text-gray-300">09:00 - 18:00</span>
+</div>
+<div class="flex justify-between border-b border-primary/10 pb-2">
+<span class="text-white">Cumartesi</span>
+<span class="text-gray-300">09:00 - 13:00</span>
+</div>
+<div class="flex justify-between pt-1">
+<span class="text-white">Pazar</span>
+<span class="text-primary font-medium">Kapalı</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:col-span-7">
+<div class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-2xl p-6 sm:p-10 shadow-lg">
+<h2 class="text-2xl font-bold mb-6 text-[#111418] dark:text-white">Mesaj Gönderin</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="name">Ad Soyad</label>
+<input class="w-full h-12 rounded-lg border-border-light dark:border-border-dark bg-[#fcfcfc] dark:bg-[#1e1b12] text-[#111418] dark:text-white px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email">E-posta Adresi</label>
+<input class="w-full h-12 rounded-lg border-border-light dark:border-border-dark bg-[#fcfcfc] dark:bg-[#1e1b12] text-[#111418] dark:text-white px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" id="email" placeholder="ornek@sirket.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="phone">Telefon</label>
+<input class="w-full h-12 rounded-lg border-border-light dark:border-border-dark bg-[#fcfcfc] dark:bg-[#1e1b12] text-[#111418] dark:text-white px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" id="phone" placeholder="+90 5XX XXX XX XX" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="subject">Konu</label>
+<select class="w-full h-12 rounded-lg border-border-light dark:border-border-dark bg-[#fcfcfc] dark:bg-[#1e1b12] text-[#111418] dark:text-white px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all cursor-pointer" id="subject">
+<option disabled="" selected="" value="">Seçiniz</option>
+<option value="quote">Fiyat Teklifi</option>
+<option value="support">Teknik Destek</option>
+<option value="consulting">Danışmanlık</option>
+<option value="other">Diğer</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="message">Mesajınız</label>
+<textarea class="w-full rounded-lg border-border-light dark:border-border-dark bg-[#fcfcfc] dark:bg-[#1e1b12] text-[#111418] dark:text-white p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600 resize-none" id="message" placeholder="Projeniz hakkında detaylar..." rows="5"></textarea>
+</div>
+<div class="flex items-center gap-3">
+<input class="size-5 rounded border-gray-300 text-primary focus:ring-primary bg-[#fcfcfc] dark:bg-[#1e1b12] dark:border-border-dark cursor-pointer" id="privacy" type="checkbox"/>
+<label class="text-sm text-gray-600 dark:text-gray-400 cursor-pointer select-none" for="privacy">
+<a class="text-primary hover:underline" href="#">KVKK Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
+                                </label>
+</div>
+<button class="w-full sm:w-auto h-12 px-8 bg-primary hover:bg-primary-hover text-[#221e11] font-bold rounded-lg transition-all transform active:scale-95 shadow-md flex items-center justify-center gap-2" type="button">
+<span>Mesajı Gönder</span>
+<span class="material-symbols-outlined text-sm font-bold">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[450px] bg-surface-dark relative overflow-hidden">
+<!-- Interactive Map Placeholder -->
+<div class="w-full h-full bg-cover bg-center map-filter" data-alt="Map showing location in Istanbul, Turkey" data-location="Istanbul, Turkey" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXlN8KCBfbbJb8vRurHGiyfOuob_2WIsKKGucn1BHKAmqKeVhjTMS-Zq75rr3LLmMtl9qhpfyj2C_1HrVHyzBhc5r0bsibst_OF5k2LQ4tzS-pOZhzaohxvRzpnLnq2LUH66VEsrpBFuqvAr-TF-LE-dhpYvmXVeitUymMiMmu7iDGgvRUwvWBvo6xbTqZqK-ueo7s2r8_qJROksuh71BGiEVvUl-ZM8mWar1ttgIfJ9jRM-zePA4hN4QTRElq4qnWMGwrf3mU11jy");'>
+<!-- Overlay content for aesthetics -->
+<div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+</div>
+<!-- Map Pin Overlay (Simulated) -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none z-10">
+<div class="size-12 bg-primary rounded-full flex items-center justify-center shadow-xl border-4 border-[#221e11] animate-bounce">
+<span class="material-symbols-outlined text-[#221e11] text-[28px]">domain</span>
+</div>
+<div class="mt-2 px-3 py-1 bg-[#221e11] text-white text-xs font-bold rounded shadow-lg whitespace-nowrap">
+                     SMS İNOVASYON HQ
+                 </div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-[#18150c] border-t border-border-light dark:border-border-dark py-12 px-4 sm:px-10">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 text-[#111418] dark:text-white">
+<div class="size-6 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold leading-tight">SMS İNOVASYON</h2>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs">
+                        Endüstriyel çözümler ve mühendislik danışmanlığında güvenilir iş ortağınız.
+                    </p>
+<div class="flex gap-4 mt-2">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a> <!-- LinkedIn placeholder icon -->
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a> <!-- Instagram placeholder icon -->
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a> <!-- Twitter/X placeholder icon -->
+</div>
+</div>
+<div class="flex gap-16 flex-wrap">
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-[#111418] dark:text-white uppercase tracking-wider">Hızlı Erişim</h4>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Ana Sayfa</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Hizmetler</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Hakkımızda</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">İletişim</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-[#111418] dark:text-white uppercase tracking-wider">Yasal</h4>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Gizlilik Politikası</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Kullanım Şartları</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Çerez Politikası</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-border-light dark:border-border-dark flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-500">© 2023 SMS İnovasyon Mühendislik. Tüm hakları saklıdır.</p>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-green-500"></div>
+<span class="text-xs text-gray-500">Sistemler Çalışıyor</span>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

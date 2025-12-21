@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Müşteri Yorumları - SMS İNOVASYON</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#edbc1d",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221e10; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #483f23; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #edbc1d; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#483f23] px-10 py-3 bg-[#221e11]">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">engineering</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">SMS İNOVASYON</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 hidden md:flex">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Ana Sayfa</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Hizmetler</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Projeler</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Referanslar</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">İletişim</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#221e11] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-yellow-400 transition-colors">
+<span class="truncate">Teklif Al</span>
+</button>
+</div>
+<div class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full">
+<!-- Hero Section -->
+<div class="w-full bg-[#221e11] flex justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 w-full px-4 md:px-0">
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10 relative overflow-hidden group" data-alt="Industrial engineering site with blurred workers in background" style='background-image: linear-gradient(rgba(34, 30, 16, 0.4) 0%, rgba(34, 30, 16, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrvLpMzVSzTms0AchS3Zl0H3N682E7xkqYkJ51OMRqlUNXC-80dJ2FPUd9kwKSYo5z1T4hfgbY9JYshln_MU0RY_5gOGjBq05udl1SDzhjQRYzcWkYB7tmQ4JAZI1wygC62cv5ibkCsGEByZrrnC0PjAFPzhZlWcumfztjveOnUyq0RlHEytCKSop5FbsNhLd4gz59BduidVR9m4bbLnsBTpcPBY3HHLOVlfXf2B3dTcueaaMQAezGPRJUIGzGvoQbsCTJrLoXOwQc");'>
+<div class="flex flex-col gap-2 text-left z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 w-fit backdrop-blur-sm mb-2">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wide">Müşteri Deneyimleri</span>
+</div>
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">
+                                        Güven İnşa Ediyoruz,<br/>Geleceği Tasarlıyoruz
+                                    </h1>
+<h2 class="text-[#c9bc92] text-sm font-normal leading-normal @[480px]:text-lg max-w-2xl">
+                                        Mühendislik mükemmelliği ve güvene dayalı işbirliklerimizin başarı hikayelerini keşfedin. Sektör liderlerinin neden bizi tercih ettiğini görün.
+                                    </h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Breadcrumbs -->
+<div class="w-full bg-[#221e11] flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-0">
+<div class="flex flex-wrap gap-2 p-4 border-b border-[#483f23]">
+<a class="text-[#c9bc92] text-sm font-medium leading-normal hover:text-white transition-colors" href="#">Ana Sayfa</a>
+<span class="text-[#c9bc92] text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">Müşteri Yorumları</span>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="w-full bg-[#221e11] flex justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-0">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#675a32] bg-[#2c281b]/50 backdrop-blur-sm hover:border-primary transition-colors group">
+<div class="p-2 rounded-lg bg-[#483f23] w-fit text-primary group-hover:bg-primary group-hover:text-[#221e11] transition-colors">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+</div>
+<div>
+<p class="text-[#c9bc92] text-sm font-medium">Tamamlanan Proje</p>
+<p class="text-white text-2xl font-bold">500+</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#675a32] bg-[#2c281b]/50 backdrop-blur-sm hover:border-primary transition-colors group">
+<div class="p-2 rounded-lg bg-[#483f23] w-fit text-primary group-hover:bg-primary group-hover:text-[#221e11] transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</div>
+<div>
+<p class="text-[#c9bc92] text-sm font-medium">Memnuniyet</p>
+<p class="text-white text-2xl font-bold">%98</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#675a32] bg-[#2c281b]/50 backdrop-blur-sm hover:border-primary transition-colors group">
+<div class="p-2 rounded-lg bg-[#483f23] w-fit text-primary group-hover:bg-primary group-hover:text-[#221e11] transition-colors">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div>
+<p class="text-[#c9bc92] text-sm font-medium">Tecrübe</p>
+<p class="text-white text-2xl font-bold">15 Yıl</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#675a32] bg-[#2c281b]/50 backdrop-blur-sm hover:border-primary transition-colors group">
+<div class="p-2 rounded-lg bg-[#483f23] w-fit text-primary group-hover:bg-primary group-hover:text-[#221e11] transition-colors">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<div>
+<p class="text-[#c9bc92] text-sm font-medium">Uzman Kadro</p>
+<p class="text-white text-2xl font-bold">40+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Partners Logos -->
+<div class="w-full bg-[#221e11] flex justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-0">
+<h2 class="text-white tracking-light text-[24px] font-bold leading-tight px-4 text-center pb-6">Güvenen İş Ortaklarımız</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Logos placeholders -->
+<div class="h-16 flex items-center justify-center bg-[#2c281b] rounded-lg border border-[#483f23]">
+<span class="text-white font-bold text-lg">TEKFEN</span>
+</div>
+<div class="h-16 flex items-center justify-center bg-[#2c281b] rounded-lg border border-[#483f23]">
+<span class="text-white font-bold text-lg">ENKA</span>
+</div>
+<div class="h-16 flex items-center justify-center bg-[#2c281b] rounded-lg border border-[#483f23]">
+<span class="text-white font-bold text-lg">RÖNESANS</span>
+</div>
+<div class="h-16 flex items-center justify-center bg-[#2c281b] rounded-lg border border-[#483f23]">
+<span class="text-white font-bold text-lg">LİMAK</span>
+</div>
+<div class="h-16 flex items-center justify-center bg-[#2c281b] rounded-lg border border-[#483f23]">
+<span class="text-white font-bold text-lg">GAMA</span>
+</div>
+<div class="h-16 flex items-center justify-center bg-[#2c281b] rounded-lg border border-[#483f23]">
+<span class="text-white font-bold text-lg">YAPI MERKEZİ</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviews Filter & Content -->
+<div class="w-full bg-[#221e11] flex justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-0">
+<!-- Tabs -->
+<div class="flex justify-center mb-10 overflow-x-auto no-scrollbar px-4">
+<div class="flex p-1 bg-[#2c281b] rounded-full border border-[#483f23]">
+<button class="px-6 py-2 rounded-full bg-primary text-[#221e11] text-sm font-bold shadow-sm transition-all">Tümü</button>
+<button class="px-6 py-2 rounded-full text-[#c9bc92] hover:text-white text-sm font-medium transition-all">Mühendislik</button>
+<button class="px-6 py-2 rounded-full text-[#c9bc92] hover:text-white text-sm font-medium transition-all">Danışmanlık</button>
+<button class="px-6 py-2 rounded-full text-[#c9bc92] hover:text-white text-sm font-medium transition-all">Kalite Kontrol</button>
+</div>
+</div>
+<!-- Reviews Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+<!-- Review Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-[#2a261a] border border-[#483f23] hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
+<span class="material-symbols-outlined text-6xl text-[#483f23] absolute top-4 right-4 opacity-50 group-hover:text-primary/10 transition-colors">format_quote</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed z-10 relative">
+                                "SMS İnovasyon ile çalışmak projemizin kaderini değiştirdi. Karmaşık mühendislik sorunlarına getirdikleri pratik ve bilimsel çözümler sayesinde teslimat süremizi 2 ay öne çektik. Kesinlikle tavsiye ediyorum."
+                            </p>
+<div class="w-full h-px bg-[#483f23] my-2"></div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-cover border-2 border-[#483f23]" data-alt="Portrait of Ahmet Yılmaz, Project Manager" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfaM7THVGXU6F-TxcwIzPiJGvD3HYzEPYsDhn2penPVogApunTdJl10gZInvTptWEIDKVgj7rGpw05LJGsxmIBvqPGocdmEhsvhI3KnztFF0B4y8LGjt-2oTlDCDt2KH58W6qb5I9jrgGMS2i-QdFlhPZpuZi2QNIF7AwZUTR4IklzR7iqx1O6zTp7EYB8Q1mkATYNMbpi3zCXd7QpccgYFZCXz06DAUUkmid_TNQQnB5hla2ahpfoqkbi_6S1lPT26RTHqIDKEi2C");'></div>
+<div>
+<p class="text-white font-bold text-sm">Ahmet Yılmaz</p>
+<p class="text-primary text-xs font-medium">Proje Müdürü, Tekfen</p>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-[#2a261a] border border-[#483f23] hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
+<span class="material-symbols-outlined text-6xl text-[#483f23] absolute top-4 right-4 opacity-50 group-hover:text-primary/10 transition-colors">format_quote</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star_half</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed z-10 relative">
+                                "Kalite kontrol süreçlerinde gösterdikleri titizlik inanılmaz. Standartların ötesinde bir hizmet anlayışları var. Endüstriyel tesisimizin denetimlerinde hiçbir detayı atlamadılar."
+                            </p>
+<div class="w-full h-px bg-[#483f23] my-2"></div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-cover border-2 border-[#483f23]" data-alt="Portrait of Elif Demir, Quality Director" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPvQlkSfphkQKiI35JkU7gJvTfKuGDnYavNtH4SB7wZBJ4A3cwl9oG0M6sSSQ_PeSe0V91_cyYII0tXSq7SlJdC92tS9boq4BbVSZ_e2F4FsVrV9RjKNMbuyL9_RCTfaqZvOyyQBDyuYePYUxuwMFT_tL-KAQkO95dDW1dPBfuer46biwbd6pkPVNlxX8YuoaMg3h5ylpLv_NFeJg-R-x8OLFmYIr0A77Rtg8UaKzUoVSQChKBnaORi73B1Q1azaxARtgKD_yrayt_");'></div>
+<div>
+<p class="text-white font-bold text-sm">Elif Demir</p>
+<p class="text-primary text-xs font-medium">Kalite Direktörü, Rönesans</p>
+</div>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-[#2a261a] border border-[#483f23] hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
+<span class="material-symbols-outlined text-6xl text-[#483f23] absolute top-4 right-4 opacity-50 group-hover:text-primary/10 transition-colors">format_quote</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed z-10 relative">
+                                "15 yıllık meslek hayatımda bu kadar profesyonel bir ekiple az karşılaştım. Teknik raporlamaları ve saha uygulamaları kusursuz. Gelecek projelerimizde de tercihimiz SMS İnovasyon olacak."
+                            </p>
+<div class="w-full h-px bg-[#483f23] my-2"></div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-cover border-2 border-[#483f23]" data-alt="Portrait of Mehmet Kaya, Chief Engineer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDy-XbIWvtwAbdaRHZIKdYhQm0PDp8RMWeBhLs5kLyCi8CQkniyxl_gufYskFh96FPdyOqn1gvuMmxpBeeSFWGoBDjosiHJkZWBKj6c53oRGGumsUF3Nwm4vFDm74j7mMZMFc_Q8iw5hdZLoaPjPLYpdO-U6aQJf3w8yyg5OmeM0MnOEBou4A5Zkmwl1-bFvm6DE1kmRYheuS06_xWjwwgF-vm0k3MrEj-j06jtFNxNxzlUjOYHdBDyzm0qPuHTqKTBHvZ-pNO5tKUP");'></div>
+<div>
+<p class="text-white font-bold text-sm">Mehmet Kaya</p>
+<p class="text-primary text-xs font-medium">Baş Mühendis, Enka</p>
+</div>
+</div>
+</div>
+<!-- Review Card 4 -->
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-[#2a261a] border border-[#483f23] hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
+<span class="material-symbols-outlined text-6xl text-[#483f23] absolute top-4 right-4 opacity-50 group-hover:text-primary/10 transition-colors">format_quote</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed z-10 relative">
+                                "Danışmanlık hizmetleri kapsamında aldığımız destek, maliyetlerimizi %15 oranında düşürmemizi sağladı. Sadece mühendislik değil, maliyet yönetimi konusunda da uzmanlar."
+                            </p>
+<div class="w-full h-px bg-[#483f23] my-2"></div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-cover border-2 border-[#483f23]" data-alt="Portrait of Canan Yıldız, Operations Manager" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2EvdbSc2CjJQCQZh62GuBhps9Dau7ohXAEN33-NJ6MEzpaR7kG9b08g1G-GWKHYUt-JVfbUcH_stCZ3YiPqBf1h2BV4IQ-thBNY0KRqzHyK2sJId1UJFQtJ078pBzG2ticspzQrL8mffjjXfjOAPPK3t4WNuSMPHIAVvAFBAaBgthrXeoNTPI2RhC8s1DzyHNrVkoinRsIbeZHs838i_opxHBhWU7GA_EACJ4GafPghYYppPNkNOhZPGjBAdoncOcskt6Ghqwo1k4");'></div>
+<div>
+<p class="text-white font-bold text-sm">Canan Yıldız</p>
+<p class="text-primary text-xs font-medium">Operasyon Müdürü, Limak</p>
+</div>
+</div>
+</div>
+<!-- Review Card 5 -->
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-[#2a261a] border border-[#483f23] hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
+<span class="material-symbols-outlined text-6xl text-[#483f23] absolute top-4 right-4 opacity-50 group-hover:text-primary/10 transition-colors">format_quote</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed z-10 relative">
+                                "Hızlı aksiyon alma yetenekleri ve kriz anındaki soğukkanlılıkları takdire şayan. Şantiye sürecindeki beklenmedik sorunları profesyonelce yönettiler."
+                            </p>
+<div class="w-full h-px bg-[#483f23] my-2"></div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-cover border-2 border-[#483f23]" data-alt="Portrait of Burak Öztürk, Site Chief" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5yj9BIrrIhMjvSUpQ-SAicigI-CVMkaiI_LMiSY7Nr6pD5oTEfwVABPELpPZ9LKZwMtlJZMqKc-YDl2Pdd5sOyX7QFkN4orVO0fqUMhyzl2lYg3EkwfsjFmDjGk555lpjliShj9Uqv_NHtIjw9OGerkgOPhU7sMNAe0KOvaecZGiQuiBDAj42hbuitjRXEUCugEF4lMUWtPZ2Ev8nFMRgwzkPgBmaGsmu6XSXALb9aM2qmKvrNcC3--WUaliGJ9SzwdSdw4T-6PuN");'></div>
+<div>
+<p class="text-white font-bold text-sm">Burak Öztürk</p>
+<p class="text-primary text-xs font-medium">Saha Şefi, Gama</p>
+</div>
+</div>
+</div>
+<!-- Review Card 6 -->
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-[#2a261a] border border-[#483f23] hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
+<span class="material-symbols-outlined text-6xl text-[#483f23] absolute top-4 right-4 opacity-50 group-hover:text-primary/10 transition-colors">format_quote</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star_half</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed z-10 relative">
+                                "Teknolojik altyapıları ve modern mühendislik yaklaşımları onları rakiplerinden ayırıyor. Dijital ikiz projelerimizde sundukları vizyon çok etkileyiciydi."
+                            </p>
+<div class="w-full h-px bg-[#483f23] my-2"></div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-cover border-2 border-[#483f23]" data-alt="Portrait of Selin Arslan, Technical Architect" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDh9tlecnyQ7Uh46YipA2KfqfNSBTMYUT9Aj9ji6ygeheyXwnC0Cb0Of6zIcwOlkfoOlqKRIBtd9Ym4KHrvG8Sm9k-vIPMCSOdCucUCnIDkbJO5Fo6bjmc3FedQA-O5O7nk8_7lcd7ZD0S0HLTweWkz2lD3hqr7ok1-vive9sTsToSeCQaE5qb4YlQPJlp67F3SM3Z1Thx59MwSm9I-4NXzXhNKbJVrTdGVU9ae2y1lu-zelPoIgRRMd4qomVLYEIaTsAS_4-vgjSAH");'></div>
+<div>
+<p class="text-white font-bold text-sm">Selin Arslan</p>
+<p class="text-primary text-xs font-medium">Teknik Mimar, Yapı Merkezi</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12 gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-[#483f23] text-white hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-[#221e11] font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-[#483f23] text-white hover:border-primary hover:text-primary transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-[#483f23] text-white hover:border-primary hover:text-primary transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-[#483f23] text-white hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="w-full bg-[#1a170d] border-t border-[#483f23] py-16 flex justify-center">
+<div class="layout-content-container flex flex-col md:flex-row items-center justify-between max-w-[960px] flex-1 px-4 md:px-10 gap-8">
+<div class="flex flex-col gap-3 max-w-lg">
+<h3 class="text-white text-3xl font-bold leading-tight">Bir Sonraki Başarı Hikayesi Sizin Olsun</h3>
+<p class="text-[#c9bc92] text-base">Projelerinizi uzman mühendis kadromuzla hayata geçirmek ve endüstriyel standartların üzerine çıkmak için bizimle iletişime geçin.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-[#221e11] text-base font-bold leading-normal tracking-[0.015em] hover:bg-yellow-400 transition-colors shadow-lg shadow-primary/20">
+                            Hemen Başlayın
+                        </button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border border-[#c9bc92] text-white text-base font-bold leading-normal hover:bg-[#c9bc92]/10 transition-colors">
+                            Bize Ulaşın
+                        </button>
+</div>
+</div>
+</div>
+<!-- Minimal Footer -->
+<footer class="w-full bg-[#221e11] border-t border-[#483f23] py-8 flex justify-center">
+<div class="layout-content-container flex flex-col items-center max-w-[960px] flex-1 px-4 gap-4 text-center">
+<p class="text-[#c9bc92] text-sm">© 2023 SMS İnovasyon Mühendislik. Tüm hakları saklıdır.</p>
+<div class="flex gap-6">
+<a class="text-[#675a32] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-[#675a32] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-[#675a32] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

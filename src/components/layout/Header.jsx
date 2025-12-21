@@ -10,6 +10,7 @@ export default function Header() {
         { path: '/hakkimizda', label: 'Hakkımızda' },
         { path: '/referanslar', label: 'Referanslar' },
         { path: '/galeri', label: 'Galeri' },
+        { path: '/sss', label: 'S.S.S.' },
         { path: '/kariyer', label: 'Kariyer' },
         { path: '/iletisim', label: 'İletişim' },
     ]

@@ -2,86 +2,7 @@ import { Badge, Button } from '../components/ui/Components'
 
 // Detaylı hizmet verisi
 const detailedServices = [
-    {
-        id: '13094',
-        icon: 'gavel',
-        badge: 'Yeni Hizmet',
-        badgeIcon: 'new_releases',
-        title: '13094 Danışmanlığı',
-        description: 'İş Ekipmanlarının Kullanımında Sağlık ve Güvenlik Şartları Yönetmeliği kapsamında zorunlu periyodik kontrol hizmetleri sunuyoruz.',
-        features: [
-            { title: 'Basınçlı Kaplar', desc: 'Kazanlar, kompresörler, LPG tankları, otoklav cihazları' },
-            { title: 'Kaldırma-İletme Ekipmanları', desc: 'Vinçler, forkliftler, asansörler, yük asansörleri' },
-            { title: 'Tezgahlar ve Makineler', desc: 'CNC tezgahlar, presler, kesme makineleri' },
-            { title: 'Elektriksel Güvenlik', desc: 'Topraklama testleri, izolasyon ölçümleri, paratoner kontrolleri' },
-        ],
-        specs: [
-            { label: 'Yasal Zorunluluk', value: '6331 Sayılı Kanun' },
-            { label: 'Tebliğ No', value: '13094' },
-            { label: 'Kontrol Periyodu', value: 'Yıllık / 3-5 Yıl' },
-            { label: 'Akreditasyon', value: 'TÜRKAK' },
-        ]
-    },
-    {
-        id: 'ndt',
-        icon: 'visibility',
-        badge: 'NDT Hizmetleri',
-        badgeIcon: 'science',
-        title: 'Tahribatsız Muayene (NDT)',
-        description: 'Malzeme bütünlüğünü bozmadan kusur tespiti yapan uluslararası standartlara uygun test hizmetleri sunuyoruz.',
-        features: [
-            { title: 'Ultrasonik Test (UT)', desc: 'Ses dalgaları ile malzeme içi kusur tespiti ve kalınlık ölçümü' },
-            { title: 'Manyetik Parçacık Testi (MT)', desc: 'Ferro-manyetik malzemelerde yüzey kusurlarının tespiti' },
-            { title: 'Sıvı Penetrant Testi (PT)', desc: 'Kapiler etki prensibi ile yüzey açık kusurlarının tespiti' },
-            { title: 'Radyografik Test (RT)', desc: 'X-ışını ve gama ışını ile malzeme içi görüntüleme' },
-        ],
-        specs: [
-            { label: 'Standart', value: 'ISO 9712' },
-            { label: 'Personel Seviyesi', value: 'Level II & III' },
-            { label: 'Uygulama Alanı', value: 'Endüstriyel' },
-            { label: 'Akreditasyon', value: 'TÜRKAK' },
-        ]
-    },
-    {
-        id: 'gelismis-ndt',
-        icon: 'view_in_ar',
-        badge: 'İleri Teknoloji',
-        badgeIcon: 'auto_awesome',
-        title: 'Gelişmiş NDT Teknikleri',
-        description: 'Kritik yapısal analizler için yüksek teknoloji yöntemlerle hassas kusur tespiti ve değerlendirme hizmetleri.',
-        features: [
-            { title: 'Phased Array (PAUT)', desc: 'Çoklu elemanlı prob ile gelişmiş ultrasonik görüntüleme' },
-            { title: 'TOFD (Kırınım Zamanı)', desc: 'Yüksek doğruluklu boyutlandırma ve kusur karakterizasyonu' },
-            { title: 'Dijital Radyografi (DR)', desc: 'Anlık görüntüleme ile hızlı ve hassas analiz' },
-            { title: 'Girdap Akımı Testi (ET)', desc: 'İletken malzemelerde yüzey ve yüzeye yakın kusur tespiti' },
-        ],
-        specs: [
-            { label: 'Standart', value: 'ISO 13588' },
-            { label: 'Teknoloji', value: 'Dijital' },
-            { label: 'Hassasiyet', value: 'Yüksek' },
-            { label: 'Raporlama', value: 'Anlık' },
-        ]
-    },
-    {
-        id: 'kaynak',
-        icon: 'precision_manufacturing',
-        badge: 'Kaynak Mühendisliği',
-        badgeIcon: 'engineering',
-        title: 'Kaynak Mühendisliği Hizmetleri',
-        description: 'Kaynak prosedürlerinin hazırlanması, denetimi ve personel sertifikalandırma hizmetleri sunuyoruz.',
-        features: [
-            { title: 'WPS Hazırlama', desc: 'EN 15609 standardına uygun Kaynak Prosedür Şartnameleri' },
-            { title: 'WPQR Oluşturma', desc: 'EN 15614 standardına göre Kaynak Yöntem Onay Raporları' },
-            { title: 'Kaynakçı Sertifikasyonu', desc: 'EN 9606 standardına uygun yetkinlik belgelendirmesi' },
-            { title: 'Kaynak Koordinasyonu', desc: 'Dış kaynaklı Sorumlu Kaynak Koordinatörü (RWC) hizmeti' },
-        ],
-        specs: [
-            { label: 'Standart', value: 'EN 15085' },
-            { label: 'Sertifikasyon', value: 'EN 9606' },
-            { label: 'Dokümantasyon', value: 'WPS/WPQR' },
-            { label: 'Akreditasyon', value: 'Uluslararası' },
-        ]
-    },
+    // 1. ADR Tank Muayeneleri (Öne alındı)
     {
         id: 'adr',
         icon: 'local_shipping',
@@ -102,10 +23,53 @@ const detailedServices = [
             { label: 'Belgelendirme', value: 'Uluslararası' },
         ]
     },
+    // 2. Kaynak Mühendisliği (Kaynaklı İmalat)
+    {
+        id: 'kaynak',
+        icon: 'precision_manufacturing',
+        badge: 'Kaynak Mühendisliği',
+        badgeIcon: 'engineering',
+        title: 'Kaynak Mühendisliği Hizmetleri',
+        description: 'Kaynak prosedürlerinin hazırlanması, denetimi ve personel sertifikalandırma hizmetleri sunuyoruz.',
+        features: [
+            { title: 'WPS Hazırlama', desc: 'EN 15609 standardına uygun Kaynak Prosedür Şartnameleri' },
+            { title: 'WPQR Oluşturma', desc: 'EN 15614 standardına göre Kaynak Yöntem Onay Raporları' },
+            { title: 'Kaynakçı Sertifikasyonu', desc: 'EN 9606 standardına uygun yetkinlik belgelendirmesi' },
+            { title: 'Kaynak Koordinasyonu', desc: 'Dış kaynaklı Sorumlu Kaynak Koordinatörü (RWC) hizmeti' },
+        ],
+        specs: [
+            { label: 'Standart', value: 'EN 15085' },
+            { label: 'Sertifikasyon', value: 'EN 9606' },
+            { label: 'Dokümantasyon', value: 'WPS/WPQR' },
+            { label: 'Akreditasyon', value: 'Uluslararası' },
+        ]
+    },
+    // 3. 13094 Danışmanlığı
+    {
+        id: '13094',
+        icon: 'gavel',
+        badge: 'Danışmanlık',
+        badgeIcon: 'support_agent',
+        title: '13094 Danışmanlığı',
+        description: 'İş Ekipmanlarının Kullanımında Sağlık ve Güvenlik Şartları Yönetmeliği kapsamında zorunlu periyodik kontrol hizmetleri sunuyoruz.',
+        features: [
+            { title: 'Basınçlı Kaplar', desc: 'Kazanlar, kompresörler, LPG tankları, otoklav cihazları' },
+            { title: 'Kaldırma-İletme Ekipmanları', desc: 'Vinçler, forkliftler, asansörler, yük asansörleri' },
+            { title: 'Tezgahlar ve Makineler', desc: 'CNC tezgahlar, presler, kesme makineleri' },
+            { title: 'Elektriksel Güvenlik', desc: 'Topraklama testleri, izolasyon ölçümleri, paratoner kontrolleri' },
+        ],
+        specs: [
+            { label: 'Yasal Zorunluluk', value: '6331 Sayılı Kanun' },
+            { label: 'Tebliğ No', value: '13094' },
+            { label: 'Kontrol Periyodu', value: 'Yıllık / 3-5 Yıl' },
+            { label: 'Akreditasyon', value: 'TÜRKAK' },
+        ]
+    },
+    // 4. EN 15085 Demiryolu / ISO Belgelendirme
     {
         id: 'demiryolu',
         icon: 'train',
-        badge: 'Demiryolu Sistemleri',
+        badge: 'ISO Belgelendirme',
         badgeIcon: 'verified',
         title: 'EN 15085 Demiryolu Sertifikasyonu',
         description: 'Demiryolu araçları imalatı ve bakımı için Avrupa standartlarına uygun uzman teknik hizmetler.',
@@ -122,6 +86,7 @@ const detailedServices = [
             { label: 'Geçerlilik', value: '3 Yıl' },
         ]
     },
+    // 5. Periyodik Muayene
     {
         id: 'periyodik',
         icon: 'calendar_month',
@@ -142,6 +107,49 @@ const detailedServices = [
             { label: 'Akreditasyon', value: 'TÜRKAK' },
         ]
     },
+    // 6. NDT (Aşağı taşındı)
+    {
+        id: 'ndt',
+        icon: 'visibility',
+        badge: 'NDT Hizmetleri',
+        badgeIcon: 'science',
+        title: 'Tahribatsız Muayene (NDT)',
+        description: 'Malzeme bütünlüğünü bozmadan kusur tespiti yapan uluslararası standartlara uygun test hizmetleri sunuyoruz.',
+        features: [
+            { title: 'Ultrasonik Test (UT)', desc: 'Ses dalgaları ile malzeme içi kusur tespiti ve kalınlık ölçümü' },
+            { title: 'Manyetik Parçacık Testi (MT)', desc: 'Ferro-manyetik malzemelerde yüzey kusurlarının tespiti' },
+            { title: 'Sıvı Penetrant Testi (PT)', desc: 'Kapiler etki prensibi ile yüzey açık kusurlarının tespiti' },
+            { title: 'Radyografik Test (RT)', desc: 'X-ışını ve gama ışını ile malzeme içi görüntüleme' },
+        ],
+        specs: [
+            { label: 'Standart', value: 'ISO 9712' },
+            { label: 'Personel Seviyesi', value: 'Level II & III' },
+            { label: 'Uygulama Alanı', value: 'Endüstriyel' },
+            { label: 'Akreditasyon', value: 'TÜRKAK' },
+        ]
+    },
+    // 7. Gelişmiş NDT
+    {
+        id: 'gelismis-ndt',
+        icon: 'view_in_ar',
+        badge: 'İleri Teknoloji',
+        badgeIcon: 'auto_awesome',
+        title: 'Gelişmiş NDT Teknikleri',
+        description: 'Kritik yapısal analizler için yüksek teknoloji yöntemlerle hassas kusur tespiti ve değerlendirme hizmetleri.',
+        features: [
+            { title: 'Phased Array (PAUT)', desc: 'Çoklu elemanlı prob ile gelişmiş ultrasonik görüntüleme' },
+            { title: 'TOFD (Kırınım Zamanı)', desc: 'Yüksek doğruluklu boyutlandırma ve kusur karakterizasyonu' },
+            { title: 'Dijital Radyografi (DR)', desc: 'Anlık görüntüleme ile hızlı ve hassas analiz' },
+            { title: 'Girdap Akımı Testi (ET)', desc: 'İletken malzemelerde yüzey ve yüzeye yakın kusur tespiti' },
+        ],
+        specs: [
+            { label: 'Standart', value: 'ISO 13588' },
+            { label: 'Teknoloji', value: 'Dijital' },
+            { label: 'Hassasiyet', value: 'Yüksek' },
+            { label: 'Raporlama', value: 'Anlık' },
+        ]
+    },
+    // 8. Tahribatlı Muayene (En son)
     {
         id: 'tahribatli',
         icon: 'science',

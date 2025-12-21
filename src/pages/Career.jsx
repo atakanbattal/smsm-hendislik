@@ -154,7 +154,10 @@ export default function Career() {
                                         </span>
                                     </div>
                                 </div>
-                                <Button variant="outline" className="shrink-0">Detayları Gör</Button>
+                                <Button to={`/iletisim?pozisyon=${encodeURIComponent(pos.title)}`} variant="outline" className="shrink-0">
+                                    <span>Başvur</span>
+                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                </Button>
                             </div>
                         ))}
                     </div>

@@ -55,7 +55,7 @@ function initializeGemini() {
 
     try {
         genAI = new GoogleGenerativeAI(apiKey)
-        chatModel = genAI.getGenerativeModel({ model: 'gemini-pro' })
+        chatModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
         return true
     } catch (error) {
         console.error('Error initializing Gemini:', error)

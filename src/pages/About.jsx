@@ -1,11 +1,12 @@
 import { Badge, Button } from '../components/ui/Components'
 
 const team = [
-    { name: 'Muhammed Sarı', role: 'Kurucu & Genel Müdür', desc: 'SMS İnovasyon Mühendislik\'in kurucusu. Kaynak mühendisliği ve NDT alanında uzmanlaşmış, sektörde 10+ yıllık deneyime sahip.', image: '/images/founder.jpg' },
-    { name: 'Kaynak Mühendisimiz', role: 'RWC - Sorumlu Kaynak Koordinatörü', desc: 'EN 15085 ve ISO 3834 standartları kapsamında kaynak prosedürü hazırlama, WPS/WPQR dokümantasyonu ve kalite kontrol süreçlerinden sorumlu.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-    { name: 'NDT Level-3 Uzmanımız', role: 'Tahribatsız Muayene Uzmanı', desc: 'ISO 9712 sertifikalı Level-3 NDT uzmanı. UT, MT, PT, RT ve gelişmiş TOFD/Phased Array tekniklerinde deneyimli.', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80' },
-    { name: 'Kalite Yöneticimiz', role: 'ISO Belgelendirme Uzmanı', desc: 'ISO 9001, ISO 14001 ve uluslararası akreditasyon süreçlerinin yönetimi. Kalite güvence sistemlerinin kurulumu ve denetimi.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80' },
+    { name: 'Muhammed Sarı', role: 'Kurucu & Genel Müdür', desc: 'SMS İnovasyon Mühendislik\'in kurucusu. Kaynak mühendisliği ve NDT alanında uzmanlaşmış, sektörde 10+ yıllık deneyime sahip. EN 15085 ve ISO 3834 standartlarında derin uzmanlık.', image: '/images/founder.jpg', icon: null },
+    { name: 'Kaynak Mühendisimiz', role: 'RWC - Sorumlu Kaynak Koordinatörü', desc: 'EN 15085 ve ISO 3834 standartları kapsamında kaynak prosedürü hazırlama, WPS/WPQR dokümantasyonu ve kalite kontrol süreçlerinden sorumlu. Kaynakçı sertifikasyonu ve eğitim programları yürütmektedir.', image: null, icon: 'precision_manufacturing' },
+    { name: 'NDT Level-3 Uzmanımız', role: 'Tahribatsız Muayene Uzmanı', desc: 'ISO 9712 sertifikalı Level-3 NDT uzmanı. Ultrasonik Test (UT), Manyetik Parçacık (MT), Penetrant (PT), Radyografi (RT) ve gelişmiş TOFD/Phased Array tekniklerinde 15+ yıl deneyim.', image: null, icon: 'visibility' },
+    { name: 'Kalite Yöneticimiz', role: 'ISO Belgelendirme Uzmanı', desc: 'ISO 9001, ISO 14001, ISO 45001 ve uluslararası akreditasyon süreçlerinin yönetimi. Kalite güvence sistemlerinin kurulumu, iç denetim ve sürekli iyileştirme programları koordinasyonu.', image: null, icon: 'verified_user' },
 ]
+
 
 
 const projects = [
@@ -141,18 +142,26 @@ export default function About() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {team.map((member, index) => (
-                            <div key={index} className="group relative overflow-hidden rounded-lg bg-slate-metallic border border-[#333]">
-                                <div className="aspect-[3/4] overflow-hidden bg-gray-800">
-                                    <img
-                                        alt={member.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
-                                        src={member.image}
-                                    />
-                                </div>
+                            <div key={index} className="group relative overflow-hidden rounded-lg bg-slate-metallic border border-[#333] hover:border-primary/50 transition-all duration-300">
+                                {member.image ? (
+                                    <div className="aspect-[3/4] overflow-hidden bg-gray-800">
+                                        <img
+                                            alt={member.name}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                                            src={member.image}
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="aspect-[3/4] overflow-hidden bg-gradient-to-br from-slate-metallic to-background-dark flex items-center justify-center">
+                                        <div className="w-32 h-32 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                                            <span className="material-symbols-outlined text-primary text-6xl">{member.icon}</span>
+                                        </div>
+                                    </div>
+                                )}
                                 <div className="p-5 bg-slate-metallic relative border-t border-[#333]">
                                     <h4 className="text-white font-bold text-lg">{member.name}</h4>
                                     <p className="text-primary text-xs uppercase font-semibold mb-3 tracking-wider">{member.role}</p>
-                                    <p className="text-gray-400 text-xs leading-relaxed">{member.desc}</p>
+                                    <p className="text-gray-400 text-sm leading-relaxed">{member.desc}</p>
                                 </div>
                             </div>
                         ))}

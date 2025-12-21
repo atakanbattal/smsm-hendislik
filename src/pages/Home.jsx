@@ -70,7 +70,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'Hidrostatik Test', desc: 'Basınçlı kap bütünlük testleri' },
             { icon: 'engineering', title: 'Periyodik Muayene', desc: 'Yasal zorunluluk kontrolleri' },
         ],
-        image: 'https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=800&q=80',
+        image: '/images/pressure-vessel.jpg',
     },
     {
         id: 'demiryolu',

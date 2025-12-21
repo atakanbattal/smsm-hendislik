@@ -60,7 +60,7 @@ export default function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-start gap-3">
                                 <span className="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
-                                <span>Konya / Selçuklu</span>
+                                <span>Fevzi Çakmak Mh. 10669. Sok.<br />No:7A, Karatay / Konya</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="material-symbols-outlined text-primary text-lg">call</span>

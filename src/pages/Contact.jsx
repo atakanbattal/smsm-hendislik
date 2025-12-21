@@ -86,7 +86,8 @@ export default function Contact() {
                                 <div>
                                     <h3 className="text-base font-bold text-white mb-1">Merkez Ofis</h3>
                                     <p className="text-sm text-gray-400">
-                                        Konya / Selçuklu
+                                        Fevzi Çakmak Mh. 10669. Sok.<br />
+                                        No:7A, Karatay / Konya
                                     </p>
                                 </div>
                             </div>

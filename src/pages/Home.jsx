@@ -56,7 +56,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'Tank Periyodik Kontrol', desc: 'Taşıma tankları yıllık muayenesi' },
             { icon: 'engineering', title: 'Emniyet Valfi Testleri', desc: 'Basınç tahliye cihazları sertifikasyonu' },
         ],
-        image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
+        image: '/images/adr-inspection.jpg',
     },
     {
         id: 'basinc',

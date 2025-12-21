@@ -56,7 +56,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'Tank Periyodik Kontrol', desc: 'Taşıma tankları yıllık muayenesi' },
             { icon: 'engineering', title: 'Emniyet Valfi Testleri', desc: 'Basınç tahliye cihazları sertifikasyonu' },
         ],
-        image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
     },
     {
         id: 'basinc',
@@ -70,7 +70,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'Hidrostatik Test', desc: 'Basınçlı kap bütünlük testleri' },
             { icon: 'engineering', title: 'Periyodik Muayene', desc: 'Yasal zorunluluk kontrolleri' },
         ],
-        image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=800&q=80',
     },
     {
         id: 'demiryolu',

@@ -135,7 +135,7 @@ export default function Contact() {
                                             className="w-full h-12 rounded-lg border border-[#333] bg-[#1e1b12] text-white px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-600"
                                             id="name"
                                             name="name"
-                                            placeholder="John Doe"
+                                            placeholder="Mehmet Yılmaz"
                                             type="text"
                                             value={formData.name}
                                             onChange={handleChange}

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Badge, Button } from '../components/ui/Components'
+import { sendContactEmail } from '../lib/email'
+import { submitContactForm } from '../lib/supabase'
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -19,15 +21,29 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsSubmitting(true)
+        setSubmitStatus(null)
 
-        // Simulate API call - will be replaced with Supabase
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        try {
+            // E-posta gönder
+            const emailResult = await sendContactEmail(formData)
 
-        console.log('Form data:', formData)
-        setSubmitStatus('success')
-        setIsSubmitting(false)
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '', privacy: false })
+            // Supabase'e kaydet (opsiyonel - veritabanı kaydı)
+            await submitContactForm(formData)
+
+            if (emailResult.success) {
+                setSubmitStatus('success')
+                setFormData({ name: '', email: '', phone: '', subject: '', message: '', privacy: false })
+            } else {
+                setSubmitStatus('error')
+            }
+        } catch (error) {
+            console.error('Form submission error:', error)
+            setSubmitStatus('error')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
+
 
     return (
         <div className="animate-fade-in">
@@ -124,6 +140,13 @@ export default function Contact() {
                                 <div className="mb-6 p-4 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 flex items-center gap-3">
                                     <span className="material-symbols-outlined">check_circle</span>
                                     Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                                </div>
+                            )}
+
+                            {submitStatus === 'error' && (
+                                <div className="mb-6 p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 flex items-center gap-3">
+                                    <span className="material-symbols-outlined">error</span>
+                                    Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.
                                 </div>
                             )}
 

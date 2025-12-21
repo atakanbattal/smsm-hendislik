@@ -271,7 +271,7 @@ export default function Services() {
                         <Button to="/iletisim" size="lg" className="shadow-lg shadow-primary/20">
                             Teklif Talep Et
                         </Button>
-                        <Button href="tel:+903320000000" variant="secondary" size="lg">
+                        <Button href="tel:+905538860606" variant="secondary" size="lg">
                             <span className="material-symbols-outlined">call</span>
                             Hemen Arayın
                         </Button>

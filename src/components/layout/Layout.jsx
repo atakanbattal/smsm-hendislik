@@ -12,7 +12,7 @@ export default function Layout({ children }) {
             <Footer />
 
             {/* WhatsApp floating button */}
-            <WhatsAppButton phoneNumber="905320000000" />
+            <WhatsAppButton phoneNumber="905538860606" />
         </div>
     )
 }

@@ -60,15 +60,15 @@ export default function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-start gap-3">
                                 <span className="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
-                                <span>Sille Mahallesi, Sanayi Caddesi<br />No: 42, Selçuklu / Konya</span>
+                                <span>Konya / Selçuklu</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="material-symbols-outlined text-primary text-lg">call</span>
-                                <a href="tel:+903320000000" className="hover:text-primary transition-colors">+90 332 000 00 00</a>
+                                <a href="tel:+905538860606" className="hover:text-primary transition-colors">+90 553 886 06 06</a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="material-symbols-outlined text-primary text-lg">mail</span>
-                                <a href="mailto:info@smsinovasyon.com" className="hover:text-primary transition-colors">info@smsinovasyon.com</a>
+                                <a href="mailto:info@smsmuhendislik.com" className="hover:text-primary transition-colors">info@smsmuhendislik.com</a>
                             </li>
                         </ul>
                     </div>

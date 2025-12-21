@@ -64,7 +64,7 @@ export default function Contact() {
                                 <div>
                                     <h3 className="text-base font-bold text-white mb-1">Telefon</h3>
                                     <p className="text-sm text-gray-400 mb-2">Hafta içi 09:00 - 18:00</p>
-                                    <a className="text-base font-semibold text-primary hover:underline" href="tel:+903320000000">+90 332 000 00 00</a>
+                                    <a className="text-base font-semibold text-primary hover:underline" href="tel:+905538860606">+90 553 886 06 06</a>
                                 </div>
                             </div>
                             {/* Email */}
@@ -75,7 +75,7 @@ export default function Contact() {
                                 <div>
                                     <h3 className="text-base font-bold text-white mb-1">E-posta</h3>
                                     <p className="text-sm text-gray-400 mb-2">Her zaman bize yazabilirsiniz.</p>
-                                    <a className="text-base font-semibold text-primary hover:underline" href="mailto:info@smsinovasyon.com">info@smsinovasyon.com</a>
+                                    <a className="text-base font-semibold text-primary hover:underline" href="mailto:info@smsmuhendislik.com">info@smsmuhendislik.com</a>
                                 </div>
                             </div>
                             {/* Address */}
@@ -86,8 +86,7 @@ export default function Contact() {
                                 <div>
                                     <h3 className="text-base font-bold text-white mb-1">Merkez Ofis</h3>
                                     <p className="text-sm text-gray-400">
-                                        Sille Mahallesi, Sanayi Caddesi<br />
-                                        No: 42, Selçuklu / Konya
+                                        Konya / Selçuklu
                                     </p>
                                 </div>
                             </div>

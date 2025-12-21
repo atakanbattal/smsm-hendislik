@@ -30,9 +30,9 @@ SMS İnovasyon Mühendislik, endüstriyel kalite kontrol ve ileri mühendislik d
 - %100 müşteri memnuniyeti
 
 ## İletişim Bilgileri
-- Telefon: +90 332 000 00 00
-- E-posta: info@smsinovasyon.com
-- Adres: Sille Mahallesi, Sanayi Caddesi No: 42, Selçuklu / Konya
+- Telefon: +90 553 886 06 06
+- E-posta: info@smsmuhendislik.com
+- Adres: Konya (Selçuklu)
 - Çalışma Saatleri: Pazartesi-Cuma 09:00-18:00, Cumartesi 09:00-13:00
 
 ## Sertifikalar
@@ -139,7 +139,7 @@ function getFallbackResponse(message) {
     }
 
     if (lowerMessage.includes('iletişim') || lowerMessage.includes('telefon') || lowerMessage.includes('adres')) {
-        return 'Bize ulaşmak için:\n📞 +90 332 000 00 00\n✉️ info@smsinovasyon.com\n📍 Sille Mahallesi, Selçuklu / Konya\n\nDetaylı bilgi için /iletisim sayfamızı ziyaret edebilirsiniz.'
+        return 'Bize ulaşmak için:\n📞 +90 553 886 06 06\n✉️ info@smsmuhendislik.com\n📍 Konya / Selçuklu\n\nDetaylı bilgi için /iletisim sayfamızı ziyaret edebilirsiniz.'
     }
 
     if (lowerMessage.includes('kaynak') || lowerMessage.includes('wps') || lowerMessage.includes('wpqr')) {

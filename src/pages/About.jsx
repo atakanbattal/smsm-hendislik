@@ -12,6 +12,12 @@ const team = [
 const projects = [
     { icon: 'train', title: 'Ulusal Hızlı Tren Projesi', desc: 'Gövde kaynaklarının EN 15085 standartlarına göre denetimi, ultrasonik ve manyetik parçacık testleri uzman ekibimiz tarafından başarıyla tamamlandı.', tag: 'Demiryolu Sistemleri' },
     { icon: 'factory', title: 'Petrokimya Tesisi Revizyonu', desc: 'Yüksek basınçlı reaktör ve depolama tanklarının periyodik kontrolleri, korozyon haritalandırma çalışmaları ve kalan ömür analizleri.', tag: 'Endüstriyel Tesisler' },
+    { icon: 'local_shipping', title: 'Akaryakıt Filosu ADR Sertifikasyonu', desc: '50+ tankerden oluşan akaryakıt filosunun ADR muayeneleri, T9 periyodik kontrolleri ve sızdırmazlık testleri zamanında ve başarıyla tamamlandı.', tag: 'ADR Muayene' },
+    { icon: 'build', title: 'Kimyasal Tanker Revizyonu', desc: 'Hasar görmüş kimyasal tankerin TSE ve Bakanlık onaylı tamirat/tadilat işlemleri gerçekleştirildi. İstisnai muayene başarıyla geçildi.', tag: 'Tamirat & Tadilat' },
+    { icon: 'shield', title: 'Nakliye Firması ADR Uyum Projesi', desc: 'Ulusal nakliye firmasının ADR mevzuatına tam uyumu sağlandı. Araç muayene takibi, dosya yönetimi ve personel eğitimleri tamamlandı.', tag: 'Güvenlik Danışmanlığı' },
+    { icon: 'precision_manufacturing', title: 'Özel Tasarım Tank İmalatı', desc: 'Rafineri için 45.000 litre kapasiteli ADR\'li paslanmaz çelik tank üretimi. Tasarımdan teslimat ve belgelendirmeye kadar tam destek sağlandı.', tag: 'Tank İmalatı' },
+    { icon: 'policy', title: 'İmalat Tesisi Kalite Denetimi', desc: 'Makine parçası tedarikçisinin üretim süreçlerinin 3 aylık denetimi. Tedarik zinciri kalite güvencesi raporları hazırlandı.', tag: 'Denetim & Gözetim' },
+    { icon: 'tune', title: 'Kaynak Atölyesi Kalibrasyon Projesi', desc: '120+ kaynak makinası ve 500+ ölçü aletinin TÜRKAK akreditasyonlu kalibrasyonu. Periyodik kalibrasyon takip sistemi kuruldu.', tag: 'Kalibrasyon' },
 ]
 
 export default function About() {

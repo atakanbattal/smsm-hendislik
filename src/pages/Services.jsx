@@ -2,40 +2,103 @@ import { Badge, Button } from '../components/ui/Components'
 
 // Detaylı hizmet verisi
 const detailedServices = [
-    // 1. ADR Tank Muayeneleri (Öne alındı)
+    // 1. ADR Yetkili Muayene Merkezi (Güncellenmiş)
     {
         id: 'adr',
         icon: 'local_shipping',
         badge: 'ADR Hizmetleri',
         badgeIcon: 'warning',
-        title: 'ADR Tank Muayeneleri',
-        description: 'Tehlikeli madde taşımacılığında kullanılan tanklar ve ekipmanlar için zorunlu mevzuat muayeneleri.',
+        title: 'ADR Yetkili Muayene Merkezi',
+        description: 'Ulaştırma ve Altyapı Bakanlığı ile TSE Tehlikeli Madde Taşımacılık Müdürlüğü onaylı ADR\'li yetkili muayene merkezimizde, akaryakıt, asfalt, kimyasal ve benzeri tehlikeli madde taşıyan tanklar için tüm muayene hizmetlerini sunuyoruz.',
         features: [
-            { title: 'Tank Periyodik Kontrol', desc: 'ADR kapsamında taşıma tankları yıllık muayenesi' },
-            { title: 'Emniyet Valfi Testleri', desc: 'Basınç tahliye cihazlarının test ve sertifikalandırması' },
-            { title: 'Hidrostatik Testler', desc: 'Tank bütünlüğü için basınç testleri' },
-            { title: 'Sızdırmazlık Kontrolleri', desc: 'Gas ve sıvı sızdırmazlık doğrulama testleri' },
+            { title: 'Yıllık ADR T9 Muayeneleri', desc: 'Zorunlu periyodik kontroller' },
+            { title: 'Ara Muayeneler (Sızdırmazlık)', desc: '3 yılda bir yapılan sızdırmazlık kontrolleri' },
+            { title: 'Periyodik Muayeneler (Hidrostatik)', desc: '6 yılda bir yapılan detaylı basınç testleri' },
+            { title: 'İstisnai Muayeneler', desc: 'Tamir/tadilat sonrası zorunlu kontroller' },
         ],
         specs: [
-            { label: 'Mevzuat', value: 'ADR 2023' },
-            { label: 'Kontrol Periyodu', value: 'Yıllık' },
-            { label: 'Test Türü', value: 'Hidrostatik' },
-            { label: 'Belgelendirme', value: 'Uluslararası' },
+            { label: 'Onay', value: 'TSE & Bakanlık' },
+            { label: 'Kapsam', value: 'ADR 2023' },
+            { label: 'Geçerlilik', value: 'Tüm Tesisler' },
+            { label: 'Belgelendirme', value: 'Resmi' },
         ]
     },
-    // 2. Kaynak Mühendisliği (Kaynaklı İmalat)
+    // 2. Tamirat ve Tadilat Merkezi (YENİ)
+    {
+        id: 'tamirat',
+        icon: 'build',
+        badge: 'Tamirat & Tadilat',
+        badgeIcon: 'construction',
+        title: 'ADR Onaylı Tamirat & Tadilat Merkezi',
+        description: 'Ulaştırma ve Altyapı Bakanlığı ile TSE Tehlikeli Madde Müdürlüğü onaylı merkezimizde, ADR\'li araç ve araç üst yapı tamiratları güncel yönetmeliklere uygun şekilde gerçekleştirilmektedir.',
+        features: [
+            { title: 'ADR\'li Araç Tamiratları', desc: 'Tehlikeli madde taşıma araçları için uzman onarım' },
+            { title: 'Araç Üst Yapı Onarımları', desc: 'Tank ve treyler üst yapı tadilat işlemleri' },
+            { title: 'Yönetmeliğe Uygun Modifikasyonlar', desc: 'Mevzuata uygun araç modifikasyonu' },
+            { title: 'Periyodik Bakım ve Onarım', desc: 'Düzenli bakım ve koruyucu onarım hizmetleri' },
+        ],
+        specs: [
+            { label: 'Onay', value: 'TSE & Bakanlık' },
+            { label: 'Kapsam', value: 'ADR Araçları' },
+            { label: 'Yönetmelik', value: 'Güncel ADR' },
+            { label: 'Süre', value: 'Hızlı Teslimat' },
+        ]
+    },
+    // 3. Tehlikeli Madde Güvenlik Danışmanlığı (YENİ)
+    {
+        id: 'guvenlik-danismanligi',
+        icon: 'shield',
+        badge: 'Güvenlik Danışmanlığı',
+        badgeIcon: 'security',
+        title: 'ADR Güvenlik Danışmanlık Hizmetleri',
+        description: 'Uzman kadromuzla tehlikeli madde taşımacılığı konusunda kapsamlı danışmanlık hizmetleri sunuyoruz.',
+        features: [
+            { title: 'ADR/RID Danışmanlığı', desc: 'Uluslararası sözleşmelere uygun taşımacılık danışmanlığı' },
+            { title: 'ADR\'li Araç Muayene Takibi', desc: 'Nakliye firmalarına muayene süreç yönetimi' },
+            { title: 'Dosya ve Mevzuat Yönetimi', desc: 'Dokümantasyon ve mevzuat uyum danışmanlığı' },
+            { title: 'Petrol Sektörü ADR Danışmanlığı', desc: 'Akaryakıt firmaları için özel ADR çözümleri' },
+        ],
+        specs: [
+            { label: 'Kapsam', value: 'ADR/RID' },
+            { label: 'Sektör', value: 'Tüm Sektörler' },
+            { label: 'Hizmet', value: 'Tam Destek' },
+            { label: 'Uzman', value: 'TMGD Belgeli' },
+        ]
+    },
+    // 4. Tank ve Basınçlı Kap İmalatı (YENİ)
+    {
+        id: 'tank-imalat',
+        icon: 'factory',
+        badge: 'İmalat',
+        badgeIcon: 'precision_manufacturing',
+        title: 'ADR\'li Tank ve Basınçlı Kap Üretimi',
+        description: 'Standartlara uygun, güvenli ve dayanıklı tank sistemleri üretiyoruz. ADR\'li ve ADR\'siz tüm tank ihtiyaçlarınız için yanınızdayız.',
+        features: [
+            { title: 'ADR\'li Tank/Treyler İmalatı', desc: 'Tehlikeli madde taşımacılığı için onaylı tanklar' },
+            { title: 'ADR\'siz Tank ve Treyler', desc: 'Standart yük taşımacılığı için tank üretimi' },
+            { title: 'Araç Üstü Tank Sistemleri', desc: 'Kamyon ve araç üstü özel tank çözümleri' },
+            { title: 'Özel Tasarım Projeler', desc: 'Müşteri ihtiyaçlarına özel tank tasarımları' },
+        ],
+        specs: [
+            { label: 'Kapasite', value: 'Çeşitli Boyut' },
+            { label: 'Malzeme', value: 'Çelik/Alüminyum' },
+            { label: 'Standart', value: 'ADR Uyumlu' },
+            { label: 'Garanti', value: 'Üretici Garantili' },
+        ]
+    },
+    // 5. Kaynak Mühendisliği (Mevcut + Kaynak Belgelendirme)
     {
         id: 'kaynak',
         icon: 'precision_manufacturing',
         badge: 'Kaynak Mühendisliği',
         badgeIcon: 'engineering',
-        title: 'Kaynak Mühendisliği Hizmetleri',
-        description: 'Kaynak prosedürlerinin hazırlanması, denetimi ve personel sertifikalandırma hizmetleri sunuyoruz.',
+        title: 'Kaynak Mühendisliği ve İmalat Hizmetleri',
+        description: 'Kaynak prosedürlerinin hazırlanması, denetimi ve personel sertifikalandırma hizmetleri ile profesyonel kaynaklı imalat çözümleri sunuyoruz.',
         features: [
-            { title: 'WPS Hazırlama', desc: 'EN 15609 standardına uygun Kaynak Prosedür Şartnameleri' },
-            { title: 'WPQR Oluşturma', desc: 'EN 15614 standardına göre Kaynak Yöntem Onay Raporları' },
-            { title: 'Kaynakçı Sertifikasyonu', desc: 'EN 9606 standardına uygun yetkinlik belgelendirmesi' },
-            { title: 'Kaynak Koordinasyonu', desc: 'Dış kaynaklı Sorumlu Kaynak Koordinatörü (RWC) hizmeti' },
+            { title: 'WPS/PQR Hazırlama', desc: 'Kaynak Prosedür Şartnamesi ve Kalifikasyon Kaydı' },
+            { title: 'Kaynakçı Sertifikasyonu (WQT)', desc: 'EN 9606 standardına uygun yetkinlik belgelendirmesi' },
+            { title: 'Çelik & Alüminyum Kaynak İmalatı', desc: 'Profesyonel kaynaklı yapı ve malzeme imalatı' },
+            { title: 'Kaynak Koordinasyonu (RWC)', desc: 'Dış kaynaklı Sorumlu Kaynak Koordinatörü hizmeti' },
         ],
         specs: [
             { label: 'Standart', value: 'EN 15085' },
@@ -44,7 +107,7 @@ const detailedServices = [
             { label: 'Akreditasyon', value: 'Uluslararası' },
         ]
     },
-    // 3. 13094 Danışmanlığı
+    // 6. 13094 Danışmanlığı (Mevcut)
     {
         id: '13094',
         icon: 'gavel',
@@ -65,7 +128,7 @@ const detailedServices = [
             { label: 'Akreditasyon', value: 'TÜRKAK' },
         ]
     },
-    // 4. EN 15085 Demiryolu / ISO Belgelendirme
+    // 7. EN 15085 Demiryolu / ISO Belgelendirme (Mevcut)
     {
         id: 'demiryolu',
         icon: 'train',
@@ -86,7 +149,7 @@ const detailedServices = [
             { label: 'Geçerlilik', value: '3 Yıl' },
         ]
     },
-    // 5. Periyodik Muayene
+    // 8. Periyodik Muayene (Mevcut)
     {
         id: 'periyodik',
         icon: 'calendar_month',
@@ -107,28 +170,70 @@ const detailedServices = [
             { label: 'Akreditasyon', value: 'TÜRKAK' },
         ]
     },
-    // 6. NDT (Aşağı taşındı)
+    // 9. Kalite Kontrol ve Belgelendirme (NDT + Tahribatlı Birleşik)
     {
-        id: 'ndt',
-        icon: 'visibility',
-        badge: 'NDT Hizmetleri',
-        badgeIcon: 'science',
-        title: 'Tahribatsız Muayene (NDT)',
-        description: 'Malzeme bütünlüğünü bozmadan kusur tespiti yapan uluslararası standartlara uygun test hizmetleri sunuyoruz.',
+        id: 'kalite-kontrol',
+        icon: 'verified',
+        badge: 'Kalite Kontrol',
+        badgeIcon: 'workspace_premium',
+        title: 'Kalite Kontrol ve Belgelendirme Hizmetleri',
+        description: 'Ulusal ve uluslararası normlar ile standartlar kapsamında kapsamlı muayene ve belgelendirme hizmetleri sunuyoruz.',
         features: [
-            { title: 'Ultrasonik Test (UT)', desc: 'Ses dalgaları ile malzeme içi kusur tespiti ve kalınlık ölçümü' },
-            { title: 'Manyetik Parçacık Testi (MT)', desc: 'Ferro-manyetik malzemelerde yüzey kusurlarının tespiti' },
-            { title: 'Sıvı Penetrant Testi (PT)', desc: 'Kapiler etki prensibi ile yüzey açık kusurlarının tespiti' },
-            { title: 'Radyografik Test (RT)', desc: 'X-ışını ve gama ışını ile malzeme içi görüntüleme' },
+            { title: 'Tahribatsız Muayene (NDT)', desc: 'VT, UT, MT, RT, PT testleri ile kusur tespiti' },
+            { title: 'Tahribatlı Muayene', desc: 'Çekme, darbe, sertlik ve metalografik incelemeler' },
+            { title: 'Ürün Belgelendirme', desc: 'Ürünlerin standartlara uygunluk belgelendirilmesi' },
+            { title: 'Personel/Firma Belgelendirme', desc: 'ISO ve kalite yönetim sistemleri sertifikasyonu' },
         ],
         specs: [
-            { label: 'Standart', value: 'ISO 9712' },
-            { label: 'Personel Seviyesi', value: 'Level II & III' },
-            { label: 'Uygulama Alanı', value: 'Endüstriyel' },
+            { label: 'NDT Standart', value: 'ISO 9712' },
+            { label: 'Lab Akreditasyon', value: 'ISO 17025' },
+            { label: 'Personel', value: 'Level II & III' },
             { label: 'Akreditasyon', value: 'TÜRKAK' },
         ]
     },
-    // 7. Gelişmiş NDT
+    // 10. Denetim ve Gözetim Hizmetleri (YENİ - Inspection)
+    {
+        id: 'denetim',
+        icon: 'policy',
+        badge: 'Inspection',
+        badgeIcon: 'verified_user',
+        title: 'Özel Denetim ve Gözetim Hizmetleri',
+        description: 'Siparişleriniz ve projeleriniz için özelleştirilmiş denetim ve gözetim çözümleri sunuyoruz.',
+        features: [
+            { title: 'Ürüne Özel Denetim', desc: 'Her türlü ürün için özel kalite kontrol hizmetleri' },
+            { title: 'Firmaya Özel Gözetim', desc: 'Özelleştirilmiş gözetim programları' },
+            { title: 'Sipariş Takibi', desc: 'Üretim süreçlerinin anlık izlenmesi ve raporlanması' },
+            { title: 'Tedarikçi Denetimleri', desc: 'Tedarik zinciri kalite güvence denetimleri' },
+        ],
+        specs: [
+            { label: 'Kapsam', value: 'Tüm Sektörler' },
+            { label: 'Hizmet', value: 'Özelleştirilebilir' },
+            { label: 'Raporlama', value: 'Detaylı' },
+            { label: 'Takip', value: 'Anlık' },
+        ]
+    },
+    // 11. Kalibrasyon Hizmetleri (YENİ)
+    {
+        id: 'kalibrasyon',
+        icon: 'tune',
+        badge: 'Kalibrasyon',
+        badgeIcon: 'straighten',
+        title: 'Akreditasyonlu Kalibrasyon Laboratuvarı',
+        description: '"Her şeyinizi kalibre ederiz" - Endüstriyel ölçüm cihazlarınızın hassasiyetini garanti altına alıyoruz.',
+        features: [
+            { title: 'Kaynak Makinası Kalibrasyonu', desc: 'Kaynak ekipmanlarının hassas kalibrasyonu' },
+            { title: 'Ölçü Aletleri', desc: 'Kumpas, metre ve uzunluk ölçüm cihazları' },
+            { title: 'Basınç Ölçerler (Manometre)', desc: 'Basınç ölçüm cihazlarının kalibrasyonu' },
+            { title: 'Akış Ölçerler (Debimetre)', desc: 'Akış ve debi ölçüm sistemleri kalibrasyonu' },
+        ],
+        specs: [
+            { label: 'Akreditasyon', value: 'TÜRKAK' },
+            { label: 'Standart', value: 'Uluslararası' },
+            { label: 'Sertifika', value: 'Kalibrasyon' },
+            { label: 'Takip', value: 'Periyodik' },
+        ]
+    },
+    // 12. Gelişmiş NDT (Mevcut)
     {
         id: 'gelismis-ndt',
         icon: 'view_in_ar',
@@ -149,28 +254,8 @@ const detailedServices = [
             { label: 'Raporlama', value: 'Anlık' },
         ]
     },
-    // 8. Tahribatlı Muayene (En son)
-    {
-        id: 'tahribatli',
-        icon: 'science',
-        badge: 'Laboratuvar',
-        badgeIcon: 'biotech',
-        title: 'Tahribatlı Muayene Hizmetleri',
-        description: 'Malzeme mekanik özelliklerinin doğrulanması için kapsamlı laboratuvar test hizmetleri.',
-        features: [
-            { title: 'Çekme Testi', desc: 'Malzeme mukavemet ve uzama değerlerinin belirlenmesi' },
-            { title: 'Darbe Testi', desc: 'Charpy ve Izod yöntemleriyle kırılganlık analizi' },
-            { title: 'Sertlik Testi', desc: 'Brinell, Rockwell, Vickers sertlik ölçümleri' },
-            { title: 'Metalografik İnceleme', desc: 'Mikroyapı analizi ve tane boyutu değerlendirmesi' },
-        ],
-        specs: [
-            { label: 'Standart', value: 'EN ISO 148' },
-            { label: 'Akreditasyon', value: 'ISO 17025' },
-            { label: 'Raporlama', value: 'Detaylı' },
-            { label: 'Süre', value: '3-5 İş Günü' },
-        ]
-    },
 ]
+
 
 // Hizmet Detay Kartı Bileşeni
 function ServiceDetailCard({ service, reverse = false }) {

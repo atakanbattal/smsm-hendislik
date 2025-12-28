@@ -219,7 +219,7 @@ const detailedServices = [
         badge: 'Kalibrasyon',
         badgeIcon: 'straighten',
         title: 'Akreditasyonlu Kalibrasyon Laboratuvarı',
-        description: '"Her şeyinizi kalibre ederiz" - Endüstriyel ölçüm cihazlarınızın hassasiyetini garanti altına alıyoruz.',
+        description: 'Endüstriyel ölçüm cihazlarınızın doğruluğunu ve güvenilirliğini uluslararası standartlara uygun kalibrasyon hizmetlerimizle garanti altına alıyoruz.',
         features: [
             { title: 'Kaynak Makinası Kalibrasyonu', desc: 'Kaynak ekipmanlarının hassas kalibrasyonu' },
             { title: 'Ölçü Aletleri', desc: 'Kumpas, metre ve uzunluk ölçüm cihazları' },

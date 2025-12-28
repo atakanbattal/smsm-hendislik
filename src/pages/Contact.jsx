@@ -91,7 +91,7 @@ export default function Contact() {
                                 <div>
                                     <h3 className="text-base font-bold text-white mb-1">E-posta</h3>
                                     <p className="text-sm text-gray-400 mb-2">Her zaman bize yazabilirsiniz.</p>
-                                    <a className="text-base font-semibold text-primary hover:underline" href="mailto:info@smsmuhendislik.com">info@smsmuhendislik.com</a>
+                                    <a className="text-base font-semibold text-primary hover:underline" href="mailto:info@smsmühendislik.com">info@smsmühendislik.com</a>
                                 </div>
                             </div>
                             {/* Address */}

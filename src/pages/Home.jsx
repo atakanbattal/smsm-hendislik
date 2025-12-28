@@ -151,7 +151,7 @@ const expertiseAreas = [
         id: 'kalibrasyon',
         title: 'Kalibrasyon',
         subtitle: 'Akreditasyonlu Laboratuvar',
-        description: '"Her şeyinizi kalibre ederiz" - Kaynak makinaları, ölçü aletleri, manometreler ve debimetreler için hassas kalibrasyon hizmetleri.',
+        description: 'Kaynak makinaları, ölçü aletleri, manometreler ve debimetreler için uluslararası standartlara uygun hassas kalibrasyon hizmetleri.',
         icon: 'tune',
         badge: 'TÜRKAK',
         badgeText: 'Akreditasyonlu',

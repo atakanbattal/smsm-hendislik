@@ -21,7 +21,7 @@ export async function sendContactEmail(data) {
             phone: data.phone || 'Belirtilmedi',
             subject: getSubjectLabel(data.subject),
             message: data.message,
-            to_email: 'info@smsmuhendislik.com',
+            to_email: 'info@smsmühendislik.com',
         }
 
         const response = await emailjs.send(
@@ -51,7 +51,7 @@ export async function sendCareerEmail(data) {
             phone: data.phone || 'Belirtilmedi',
             subject: `Kariyer Başvurusu: ${data.position}`,
             message: `Pozisyon: ${data.position}\n\nÖn Yazı:\n${data.coverLetter || 'Belirtilmedi'}`,
-            to_email: 'info@smsmuhendislik.com',
+            to_email: 'info@smsmühendislik.com',
         }
 
         const response = await emailjs.send(

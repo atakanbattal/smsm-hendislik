@@ -68,7 +68,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="material-symbols-outlined text-primary text-lg">mail</span>
-                                <a href="mailto:info@smsmuhendislik.com" className="hover:text-primary transition-colors">info@smsmuhendislik.com</a>
+                                <a href="mailto:info@smsmühendislik.com" className="hover:text-primary transition-colors">info@smsmühendislik.com</a>
                             </li>
                         </ul>
                     </div>

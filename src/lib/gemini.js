@@ -31,7 +31,7 @@ SMS İnovasyon Mühendislik, endüstriyel kalite kontrol ve ileri mühendislik d
 
 ## İletişim Bilgileri
 - Telefon: +90 553 886 06 06
-- E-posta: info@smsmuhendislik.com
+- E-posta: info@smsmühendislik.com
 - Adres: Fevzi Çakmak Mh. 10669. Sok. No:7A, Karatay / Konya
 - Çalışma Saatleri: Pazartesi-Cuma 09:00-18:00, Cumartesi 09:00-13:00
 
@@ -139,7 +139,7 @@ function getFallbackResponse(message) {
     }
 
     if (lowerMessage.includes('iletişim') || lowerMessage.includes('telefon') || lowerMessage.includes('adres')) {
-        return 'Bize ulaşmak için:\n📞 +90 553 886 06 06\n✉️ info@smsmuhendislik.com\n📍 Fevzi Çakmak Mh. Karatay / Konya\n\nDetaylı bilgi için /iletisim sayfamızı ziyaret edebilirsiniz.'
+        return 'Bize ulaşmak için:\n📞 +90 553 886 06 06\n✉️ info@smsmühendislik.com\n📍 Fevzi Çakmak Mh. Karatay / Konya\n\nDetaylı bilgi için /iletisim sayfamızı ziyaret edebilirsiniz.'
     }
 
     if (lowerMessage.includes('kaynak') || lowerMessage.includes('wps') || lowerMessage.includes('wpqr')) {

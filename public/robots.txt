@@ -1,0 +1,16 @@
+# SMS İnovasyon Mühendislik - robots.txt
+# https://smsmuhendislik.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://smsmuhendislik.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin/private paths (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$

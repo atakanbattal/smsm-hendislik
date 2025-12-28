@@ -99,7 +99,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'ADR\'li Araç Tamiratları', desc: 'Tehlikeli madde araçları için uzman onarım' },
             { icon: 'engineering', title: 'Üst Yapı Onarımları', desc: 'Tank ve treyler tadilat işlemleri' },
         ],
-        image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80',
+        image: '/images/tamirat-tadilat.png',
     },
     // YENİ: Güvenlik Danışmanlığı
     {
@@ -129,7 +129,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'ADR\'li Tank/Treyler', desc: 'Tehlikeli madde taşımacılığı için onaylı' },
             { icon: 'engineering', title: 'Özel Tasarım', desc: 'Müşteri ihtiyaçlarına özel projeler' },
         ],
-        image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+        image: '/images/tank-imalat.png',
     },
     // YENİ: Denetim ve Gözetim
     {
@@ -144,7 +144,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'Ürüne Özel Denetim', desc: 'Her türlü ürün için kalite kontrolü' },
             { icon: 'engineering', title: 'Tedarikçi Denetimi', desc: 'Tedarik zinciri kalite güvencesi' },
         ],
-        image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&q=80',
+        image: '/images/denetim-gozetim.png',
     },
     // YENİ: Kalibrasyon Hizmetleri
     {
@@ -159,7 +159,7 @@ const expertiseAreas = [
             { icon: 'verified', title: 'Kaynak Makinası', desc: 'Kaynak ekipmanları hassas kalibrasyonu' },
             { icon: 'engineering', title: 'Ölçü Aletleri', desc: 'Kumpas, metre, manometre kalibrasyonu' },
         ],
-        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80',
+        image: '/images/kalibrasyon.png',
     },
 ]
 

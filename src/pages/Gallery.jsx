@@ -3,28 +3,28 @@ import { Badge, Button } from '../components/ui/Components'
 
 const galleryItems = [
     // Kaynak ve İmalat
-    { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80', title: 'Endüstriyel Kaynak İşlemi', category: 'Kaynak Mühendisliği', aspect: 'aspect-[4/3]' },
-    { src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80', title: 'Kaynaklı Yapı Üretimi', category: 'Kaynak Mühendisliği', aspect: 'aspect-[3/4]' },
-    { src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80', title: 'Metal Kaynak Kalite Kontrolü', category: 'Kaynak Mühendisliği', aspect: 'aspect-video' },
+    { src: '/images/gallery-kaynak-1.png', title: 'Endüstriyel Kaynak İşlemi', category: 'Kaynak Mühendisliği', aspect: 'aspect-[4/3]' },
+    { src: '/images/gallery-kaynak-2.png', title: 'Kaynaklı Yapı Üretimi', category: 'Kaynak Mühendisliği', aspect: 'aspect-[3/4]' },
+    { src: '/images/gallery-kaynak-3.png', title: 'Metal Kaynak Kalite Kontrolü', category: 'Kaynak Mühendisliği', aspect: 'aspect-video' },
 
     // ADR ve Tanklar
-    { src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80', title: 'ADR Tankeri Muayenesi', category: 'ADR & Tanker', aspect: 'aspect-[4/3]' },
-    { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', title: 'Tehlikeli Madde Taşıma Tankı', category: 'ADR & Tanker', aspect: 'aspect-[16/10]' },
+    { src: '/images/gallery-adr-1.png', title: 'ADR Tankeri Muayenesi', category: 'ADR & Tanker', aspect: 'aspect-[4/3]' },
+    { src: '/images/gallery-adr-2.png', title: 'Tehlikeli Madde Taşıma Tankı', category: 'ADR & Tanker', aspect: 'aspect-[16/10]' },
 
     // Basınçlı Kaplar
-    { src: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80', title: 'Basınçlı Kap Denetimi', category: 'Basınçlı Kaplar', aspect: 'aspect-[3/4]' },
-    { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80', title: 'Endüstriyel Kompresör Kontrolü', category: 'Basınçlı Kaplar', aspect: 'aspect-video' },
+    { src: '/images/gallery-basinc-1.png', title: 'Basınçlı Kap Denetimi', category: 'Basınçlı Kaplar', aspect: 'aspect-[3/4]' },
+    { src: '/images/gallery-basinc-2.png', title: 'Endüstriyel Kompresör Kontrolü', category: 'Basınçlı Kaplar', aspect: 'aspect-video' },
 
     // NDT Hizmetleri
-    { src: 'https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?w=800&q=80', title: 'Ultrasonik Test Uygulaması', category: 'NDT Hizmetleri', aspect: 'aspect-[4/3]' },
-    { src: 'https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=800&q=80', title: 'Fabrika Kalite Kontrolü', category: 'NDT Hizmetleri', aspect: 'aspect-[16/10]' },
+    { src: '/images/gallery-ndt-1.png', title: 'Ultrasonik Test Uygulaması', category: 'NDT Hizmetleri', aspect: 'aspect-[4/3]' },
+    { src: '/images/gallery-ndt-2.png', title: 'Radyografik Test Uygulaması', category: 'NDT Hizmetleri', aspect: 'aspect-[16/10]' },
 
     // Demiryolu
-    { src: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80', title: 'Demiryolu Araç Bakımı', category: 'Demiryolu', aspect: 'aspect-[4/3]' },
-    { src: 'https://images.unsplash.com/photo-1532105956626-9569c03602f6?w=800&q=80', title: 'Tren Vagonu Kaynak İmalatı', category: 'Demiryolu', aspect: 'aspect-video' },
+    { src: '/images/gallery-demiryolu-1.png', title: 'Demiryolu Araç Bakımı', category: 'Demiryolu', aspect: 'aspect-[4/3]' },
+    { src: '/images/gallery-demiryolu-2.png', title: 'Tren Vagonu Kaynak İmalatı', category: 'Demiryolu', aspect: 'aspect-video' },
 
     // Genel Endüstriyel
-    { src: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&q=80', title: 'Endüstriyel Tesis Denetimi', category: 'Periyodik Kontrol', aspect: 'aspect-[3/4]' },
+    { src: '/images/gallery-periyodik.png', title: 'Endüstriyel Tesis Denetimi', category: 'Periyodik Kontrol', aspect: 'aspect-[3/4]' },
 ]
 
 const categories = ['Tümü', 'Kaynak Mühendisliği', 'ADR & Tanker', 'Basınçlı Kaplar', 'NDT Hizmetleri', 'Demiryolu']
@@ -46,7 +46,7 @@ export default function Gallery() {
                     <img
                         alt="Industrial engineering facility background"
                         className="w-full h-full object-cover opacity-60"
-                        src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80"
+                        src="/images/gallery-kaynak-1.png"
                     />
                 </div>
                 <div className="relative z-20 text-center px-4 max-w-4xl mx-auto mt-10">

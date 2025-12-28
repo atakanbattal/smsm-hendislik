@@ -22,12 +22,19 @@ const standardsData = {
         { code: 'ISO 3834', name: 'Kaynak Kalite', desc: 'Metalik malzemelerin füzyon kaynağı kalite gereksinimleri' },
         { code: 'EN 15085', name: 'Demiryolu', desc: 'Demiryolu araçları kaynaklı imalat standardı' },
         { code: 'EN ISO 15614', name: 'WPQR', desc: 'Kaynak prosedürü kalifikasyon standardı' },
-        { code: 'EN 9606', name: 'Kaynakçı', desc: 'Kaynakçı sertifikasy standardı' },
+        { code: 'EN 9606', name: 'Kaynakçı', desc: 'Kaynakçı sertifikasyon standardı' },
     ],
     ndt: [
         { code: 'ISO 9712', name: 'NDT Personel', desc: 'Tahribatsız muayene personeli sertifikasyonu' },
-        { code: 'ISO 17025', name: 'Laboratuvar', desc: 'Deney ve kalibrasyon laboratuvarları yetkinliği' },
-        { code: 'ISO 17020', name: 'Muayene', desc: 'Muayene kuruluşları için genel kriterler' },
+        { code: 'ISO 17020', name: 'Muayene Kuruluşu', desc: 'Muayene kuruluşları için genel kriterler' },
+        { code: 'EN ISO 17640', name: 'UT Kaynak', desc: 'Kaynak bağlantılarının ultrasonik muayenesi' },
+        { code: 'EN ISO 17636', name: 'RT', desc: 'Radyografik muayene standardı' },
+    ],
+    dt: [
+        { code: 'ISO 17025', name: 'DT Laboratuvar', desc: 'Tahribatlı muayene laboratuvarları akreditasyonu' },
+        { code: 'EN ISO 6892', name: 'Çekme Testi', desc: 'Metalik malzemeler için çekme deneyi' },
+        { code: 'EN ISO 148', name: 'Darbe Testi', desc: 'Charpy darbe deneyi standardı' },
+        { code: 'EN ISO 6507', name: 'Sertlik', desc: 'Vickers sertlik deneyi' },
     ],
     regulation: [
         { code: '6331', name: 'İSG Kanunu', desc: 'İş Sağlığı ve Güvenliği Kanunu' },
@@ -228,7 +235,7 @@ const industrialServices = [
         ],
         specs: [
             { label: 'NDT Standart', value: 'ISO 9712' },
-            { label: 'Lab Akreditasyon', value: 'ISO 17025' },
+            { label: 'DT Lab Akreditasyon', value: 'ISO 17025' },
             { label: 'Personel', value: 'Level II & III' },
             { label: 'Akreditasyon', value: 'TÜRKAK' },
         ],
@@ -377,6 +384,7 @@ function StandardsSection() {
         { id: 'adr', label: 'ADR & Tank', icon: 'local_shipping' },
         { id: 'welding', label: 'Kaynak', icon: 'precision_manufacturing' },
         { id: 'ndt', label: 'NDT', icon: 'visibility' },
+        { id: 'dt', label: 'DT', icon: 'science' },
         { id: 'regulation', label: 'Mevzuat', icon: 'gavel' },
     ]
 

@@ -10,36 +10,55 @@ const adrProcessSteps = [
     { step: 5, title: 'Belge Teslimi & Takip', desc: 'Resmi belgelerin teslimi ve sonraki muayene tarihinin planlanması', icon: 'task_alt', duration: '1 Gün' },
 ]
 
-// Çalıştığımız Standartlar ve Mevzuat
+// Çalıştığımız Standartlar ve Mevzuat - Kapsamlı Liste
 const standardsData = {
     adr: [
         { code: 'ADR', name: 'ECE/TRANS/505', desc: 'Tehlikeli Maddelerin Karayoluyla Uluslararası Taşınması' },
         { code: 'EN 12972', name: 'Tank Muayenesi', desc: 'Tehlikeli madde tankları periyodik muayene standardı' },
         { code: 'EN 13094', name: 'Tank Tasarımı', desc: 'ADR tankları tasarım ve imalat standardı' },
         { code: 'EN 14025', name: 'Vakumlu Tanklar', desc: 'Vakumlu izolasyonlu tanklar standardı' },
+        { code: 'EN 14432', name: 'Tank Ekipmanları', desc: 'Tank vana ve aksesuarları standardı' },
+        { code: 'EN 13175', name: 'LPG Tankları', desc: 'LPG tankları ekipman ve aksesuarları' },
     ],
     welding: [
         { code: 'ISO 3834', name: 'Kaynak Kalite', desc: 'Metalik malzemelerin füzyon kaynağı kalite gereksinimleri' },
         { code: 'EN 15085', name: 'Demiryolu', desc: 'Demiryolu araçları kaynaklı imalat standardı' },
         { code: 'EN ISO 15614', name: 'WPQR', desc: 'Kaynak prosedürü kalifikasyon standardı' },
-        { code: 'EN 9606', name: 'Kaynakçı', desc: 'Kaynakçı sertifikasyon standardı' },
+        { code: 'EN ISO 15609', name: 'WPS', desc: 'Kaynak prosedürü şartnamesi' },
+        { code: 'EN 9606', name: 'Kaynakçı Çelik', desc: 'Çelik kaynakçı sertifikasyon standardı' },
+        { code: 'EN ISO 9606-2', name: 'Kaynakçı Alüminyum', desc: 'Alüminyum kaynakçı sertifikasyonu' },
+        { code: 'EN ISO 14731', name: 'Kaynak Koordinasyonu', desc: 'Kaynak koordinasyon görevleri ve sorumlulukları' },
+        { code: 'EN ISO 5817', name: 'Kaynak Kalite Seviyeleri', desc: 'Kaynak dikişi kusur kabul seviyeleri' },
     ],
     ndt: [
         { code: 'ISO 9712', name: 'NDT Personel', desc: 'Tahribatsız muayene personeli sertifikasyonu' },
         { code: 'ISO 17020', name: 'Muayene Kuruluşu', desc: 'Muayene kuruluşları için genel kriterler' },
-        { code: 'EN ISO 17640', name: 'UT Kaynak', desc: 'Kaynak bağlantılarının ultrasonik muayenesi' },
-        { code: 'EN ISO 17636', name: 'RT', desc: 'Radyografik muayene standardı' },
+        { code: 'EN ISO 17638', name: 'MT - Manyetik', desc: 'Kaynak dikişlerinin manyetik parçacık muayenesi' },
+        { code: 'EN ISO 3452', name: 'PT - Penetrant', desc: 'Sıvı penetrant muayene standardı' },
+        { code: 'EN ISO 17640', name: 'UT - Ultrasonik', desc: 'Kaynak bağlantılarının ultrasonik muayenesi' },
+        { code: 'EN ISO 17636', name: 'RT - Radyografik', desc: 'Kaynak dikişlerinin radyografik muayenesi' },
+        { code: 'EN 13018', name: 'VT - Görsel', desc: 'Görsel muayene genel prensipleri' },
+        { code: 'EN ISO 15549', name: 'ET - Girdap Akımı', desc: 'Girdap akımı (Eddy Current) muayenesi' },
+        { code: 'EN ISO 10863', name: 'TOFD', desc: 'Kırınım zamanı yöntemi (Time of Flight Diffraction)' },
+        { code: 'EN ISO 13588', name: 'Phased Array', desc: 'Phased Array ultrasonik test standardı' },
     ],
     dt: [
         { code: 'ISO 17025', name: 'DT Laboratuvar', desc: 'Tahribatlı muayene laboratuvarları akreditasyonu' },
         { code: 'EN ISO 6892', name: 'Çekme Testi', desc: 'Metalik malzemeler için çekme deneyi' },
-        { code: 'EN ISO 148', name: 'Darbe Testi', desc: 'Charpy darbe deneyi standardı' },
-        { code: 'EN ISO 6507', name: 'Sertlik', desc: 'Vickers sertlik deneyi' },
+        { code: 'EN ISO 148', name: 'Charpy Darbe', desc: 'Charpy çentik darbe deneyi' },
+        { code: 'EN ISO 6507', name: 'Vickers Sertlik', desc: 'Vickers sertlik deneyi' },
+        { code: 'EN ISO 6506', name: 'Brinell Sertlik', desc: 'Brinell sertlik deneyi' },
+        { code: 'EN ISO 5173', name: 'Eğme Testi', desc: 'Kaynaklı birleştirmelerin eğme deneyi' },
+        { code: 'EN ISO 17639', name: 'Makro İnceleme', desc: 'Kaynak dikişlerinin makroskopik incelemesi' },
+        { code: 'EN ISO 17639', name: 'Mikro İnceleme', desc: 'Kaynak dikişlerinin mikroskopik incelemesi' },
+        { code: 'EN ISO 9015', name: 'Sertlik Haritalama', desc: 'Kaynak bölgesi sertlik haritalama deneyi' },
     ],
     regulation: [
         { code: '6331', name: 'İSG Kanunu', desc: 'İş Sağlığı ve Güvenliği Kanunu' },
         { code: '13094', name: 'Tebliğ', desc: 'İş Ekipmanları Periyodik Kontrol Tebliği' },
         { code: 'PED', name: '2014/68/EU', desc: 'Basınçlı Ekipmanlar Direktifi' },
+        { code: 'ASME', name: 'Sec. VIII', desc: 'Basınçlı kaplar tasarım ve imalat' },
+        { code: 'EN 13445', name: 'Basınçlı Kaplar', desc: 'Ateşsiz basınçlı kaplar standardı' },
     ],
 }
 
@@ -219,7 +238,7 @@ const industrialServices = [
         ],
         badge2: 'Mobil Ekip'
     },
-    // 9. Kalite Kontrol ve Belgelendirme - NDT kullanım alanları eklendi
+    // 9. Kalite Kontrol ve Belgelendirme - Kapsamlı NDT/DT detayları
     {
         id: 'kalite-kontrol',
         icon: 'verified',
@@ -228,8 +247,8 @@ const industrialServices = [
         title: 'Kalite Kontrol ve Belgelendirme Hizmetleri',
         description: 'Ulusal ve uluslararası normlar ile standartlar kapsamında kapsamlı muayene ve belgelendirme hizmetleri sunuyoruz.',
         features: [
-            { title: 'Tahribatsız Muayene (NDT)', desc: 'VT, UT, MT, RT, PT testleri ile kusur tespiti' },
-            { title: 'Tahribatlı Muayene', desc: 'Çekme, darbe, sertlik ve metalografik incelemeler' },
+            { title: 'Tahribatsız Muayene (NDT)', desc: 'VT (Görsel), MT (Manyetik), PT (Penetrant), UT (Ultrasonik), RT (Radyografik), ET (Girdap Akımı)' },
+            { title: 'Tahribatlı Muayene (DT)', desc: 'Çekme, Charpy darbe, Vickers/Brinell sertlik, eğme, makro/mikro inceleme' },
             { title: 'Ürün Belgelendirme', desc: 'Ürünlerin standartlara uygunluk belgelendirilmesi' },
             { title: 'Personel/Firma Belgelendirme', desc: 'ISO ve kalite yönetim sistemleri sertifikasyonu' },
         ],

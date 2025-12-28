@@ -3,12 +3,12 @@ import { Button, ServiceCard, Badge } from '../components/ui/Components'
 
 const services = [
     { icon: 'calendar_month', title: 'Periyodik Muayene', description: 'Endüstriyel kaldırma ekipmanları, basınçlı kaplar ve makineler için kapsamlı güvenlik kontrolleri ve raporlama.', tag: 'ISO 17020' },
-    { icon: 'visibility', title: 'Tahribatsız Muayene', description: 'Malzeme hasarı olmaksızın kusur tespiti için standart Tahribatsız Muayene (UT, MT, PT, RT).', tag: 'ISO 9712' },
-    { icon: 'view_in_ar', title: 'Gelişmiş NDT', description: 'Kritik yapısal analizler için TOFD, Phased Array ve Dijital Radyografi dahil yüksek teknoloji yöntemler.', tag: 'ISO 13588' },
-    { icon: 'science', title: 'Tahribatlı Muayene', description: 'Çekme mukavemeti, darbe, sertlik ve bükme test hizmetleri ile malzeme özelliklerinin doğrulanması.', tag: 'EN ISO 148' },
-    { icon: 'precision_manufacturing', title: 'Mühendislik Hizmetleri', description: 'Kaynak mühendisliği danışmanlığı, teknik şartname hazırlama ve proje yönetimi hizmetleri.', tag: 'EN 15085' },
+    { icon: 'visibility', title: 'Tahribatsız Muayene (NDT)', description: 'VT (Görsel), MT (Manyetik), PT (Penetrant), UT (Ultrasonik), RT (Radyografik), ET (Girdap Akımı) testleri.', tag: 'ISO 9712' },
+    { icon: 'view_in_ar', title: 'Gelişmiş NDT', description: 'Kritik yapısal analizler için TOFD, Phased Array (PAUT) ve Dijital Radyografi dahil yüksek teknoloji yöntemler.', tag: 'EN ISO 13588' },
+    { icon: 'science', title: 'Tahribatlı Muayene (DT)', description: 'Çekme, Charpy darbe, Vickers/Brinell sertlik, eğme, makro ve mikro inceleme test hizmetleri.', tag: 'ISO 17025' },
+    { icon: 'precision_manufacturing', title: 'Mühendislik Hizmetleri', description: 'Kaynak mühendisliği danışmanlığı, WPS/WPQR hazırlama, teknik şartname ve proje yönetimi.', tag: 'EN 15085' },
     { icon: 'badge', title: 'Personel Belgelendirme', description: 'NDT personeli ve teknik elemanlar için uluslararası standartlara uygun akredite belgelendirme hizmetleri.', tag: 'ISO 9712' },
-    { icon: 'verified_user', title: 'Kaynakçı Sertifikalandırma', description: 'EN 9606 standardına uygun olarak kaynakçıların teorik ve pratik sınavlarla sertifikalandırılması.', tag: 'EN 9606' },
+    { icon: 'verified_user', title: 'Kaynakçı Sertifikalandırma', description: 'EN 9606 standardına uygun olarak çelik ve alüminyum kaynakçıların sertifikalandırılması.', tag: 'EN 9606' },
     { icon: 'local_shipping', title: 'ADR Tank Muayeneleri', description: 'Tehlikeli madde taşıma tankları ve emniyet valfleri için sertifikalı mevzuat muayeneleri.', tag: 'ADR 2023' },
     { icon: 'gavel', title: '13094 Danışmanlığı', description: 'İş Ekipmanlarının Kullanımında Sağlık ve Güvenlik Şartları Yönetmeliği kapsamında periyodik kontrol danışmanlığı.', tag: '13094 Tebliği' },
 ]

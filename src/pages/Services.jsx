@@ -1,8 +1,44 @@
+import { useState } from 'react'
 import { Badge, Button } from '../components/ui/Components'
 
-// Detaylı hizmet verisi
-const detailedServices = [
-    // 1. ADR Yetkili Muayene Merkezi (Güncellenmiş)
+// ADR Muayene Süreç Adımları
+const adrProcessSteps = [
+    { step: 1, title: 'Ön Başvuru & Evrak Kontrolü', desc: 'Tank ruhsatı, ADR belgesi ve önceki muayene raporlarının kontrolü', icon: 'description', duration: '1 Gün' },
+    { step: 2, title: 'Fiziksel Muayene', desc: 'Dış ve iç görsel kontrol, kaynak dikişleri, bağlantı noktaları incelemesi', icon: 'search', duration: '1-2 Gün' },
+    { step: 3, title: 'Test Aşaması', desc: 'Sızdırmazlık testi, hidrostatik test, valf kontrolleri', icon: 'science', duration: '1 Gün' },
+    { step: 4, title: 'Raporlama & TSE Onayı', desc: 'Muayene raporunun hazırlanması ve TSE onay sürecinin tamamlanması', icon: 'verified', duration: '2-3 Gün' },
+    { step: 5, title: 'Belge Teslimi & Takip', desc: 'Resmi belgelerin teslimi ve sonraki muayene tarihinin planlanması', icon: 'task_alt', duration: '1 Gün' },
+]
+
+// Çalıştığımız Standartlar ve Mevzuat
+const standardsData = {
+    adr: [
+        { code: 'ADR', name: 'ECE/TRANS/505', desc: 'Tehlikeli Maddelerin Karayoluyla Uluslararası Taşınması' },
+        { code: 'EN 12972', name: 'Tank Muayenesi', desc: 'Tehlikeli madde tankları periyodik muayene standardı' },
+        { code: 'EN 13094', name: 'Tank Tasarımı', desc: 'ADR tankları tasarım ve imalat standardı' },
+        { code: 'EN 14025', name: 'Vakumlu Tanklar', desc: 'Vakumlu izolasyonlu tanklar standardı' },
+    ],
+    welding: [
+        { code: 'ISO 3834', name: 'Kaynak Kalite', desc: 'Metalik malzemelerin füzyon kaynağı kalite gereksinimleri' },
+        { code: 'EN 15085', name: 'Demiryolu', desc: 'Demiryolu araçları kaynaklı imalat standardı' },
+        { code: 'EN ISO 15614', name: 'WPQR', desc: 'Kaynak prosedürü kalifikasyon standardı' },
+        { code: 'EN 9606', name: 'Kaynakçı', desc: 'Kaynakçı sertifikasy standardı' },
+    ],
+    ndt: [
+        { code: 'ISO 9712', name: 'NDT Personel', desc: 'Tahribatsız muayene personeli sertifikasyonu' },
+        { code: 'ISO 17025', name: 'Laboratuvar', desc: 'Deney ve kalibrasyon laboratuvarları yetkinliği' },
+        { code: 'ISO 17020', name: 'Muayene', desc: 'Muayene kuruluşları için genel kriterler' },
+    ],
+    regulation: [
+        { code: '6331', name: 'İSG Kanunu', desc: 'İş Sağlığı ve Güvenliği Kanunu' },
+        { code: '13094', name: 'Tebliğ', desc: 'İş Ekipmanları Periyodik Kontrol Tebliği' },
+        { code: 'PED', name: '2014/68/EU', desc: 'Basınçlı Ekipmanlar Direktifi' },
+    ],
+}
+
+// Detaylı hizmet verisi - ADR & Tehlikeli Madde Kategorisi
+const adrServices = [
+    // 1. ADR Yetkili Muayene Merkezi
     {
         id: 'adr',
         icon: 'local_shipping',
@@ -23,17 +59,17 @@ const detailedServices = [
             { label: 'Belgelendirme', value: 'Resmi' },
         ]
     },
-    // 2. Tamirat ve Tadilat Merkezi (YENİ)
+    // 2. Tamirat ve Tadilat Merkezi
     {
         id: 'tamirat',
         icon: 'build',
         badge: 'Tamirat & Tadilat',
         badgeIcon: 'construction',
         title: 'ADR Onaylı Tamirat & Tadilat Merkezi',
-        description: 'Ulaştırma ve Altyapı Bakanlığı ile TSE Tehlikeli Madde Müdürlüğü onaylı merkezimizde, ADR\'li araç ve araç üst yapı tamiratları güncel yönetmeliklere uygun şekilde gerçekleştirilmektedir.',
+        description: 'Ulaştırma ve Altyapı Bakanlığı ile TSE Tehlikeli Madde Müdürlüğü onaylı merkezimizde, ADR\'li araç ve araç üst yapı tamiratları güncel yönetmeliklere uygun şekilde gerçekleştirilmektedir. Eski tankların ADR\'ye uygun hale getirilmesi (retrofit) projelerinde de uzmanız.',
         features: [
             { title: 'ADR\'li Araç Tamiratları', desc: 'Tehlikeli madde taşıma araçları için uzman onarım' },
-            { title: 'Araç Üst Yapı Onarımları', desc: 'Tank ve treyler üst yapı tadilat işlemleri' },
+            { title: 'Tank Revizyon & Modernizasyon', desc: 'Eski tankların ADR\'ye uygun hale getirilmesi' },
             { title: 'Yönetmeliğe Uygun Modifikasyonlar', desc: 'Mevzuata uygun araç modifikasyonu' },
             { title: 'Periyodik Bakım ve Onarım', desc: 'Düzenli bakım ve koruyucu onarım hizmetleri' },
         ],
@@ -44,17 +80,17 @@ const detailedServices = [
             { label: 'Süre', value: 'Hızlı Teslimat' },
         ]
     },
-    // 3. Tehlikeli Madde Güvenlik Danışmanlığı (YENİ)
+    // 3. Tehlikeli Madde Güvenlik Danışmanlığı
     {
         id: 'guvenlik-danismanligi',
         icon: 'shield',
         badge: 'Güvenlik Danışmanlığı',
         badgeIcon: 'security',
         title: 'ADR Güvenlik Danışmanlık Hizmetleri',
-        description: 'Uzman kadromuzla tehlikeli madde taşımacılığı konusunda kapsamlı danışmanlık hizmetleri sunuyoruz.',
+        description: 'Uzman kadromuzla tehlikeli madde taşımacılığı konusunda kapsamlı danışmanlık hizmetleri sunuyoruz. Muayene tarihlerinizi takip ediyor, hatırlatmalar yapıyor ve tüm evrak süreçlerinizi yönetiyoruz.',
         features: [
             { title: 'ADR/RID Danışmanlığı', desc: 'Uluslararası sözleşmelere uygun taşımacılık danışmanlığı' },
-            { title: 'ADR\'li Araç Muayene Takibi', desc: 'Nakliye firmalarına muayene süreç yönetimi' },
+            { title: 'Muayene Takip & Hatırlatma', desc: 'Periyodik muayene tarihlerinin takibi ve otomatik hatırlatma' },
             { title: 'Dosya ve Mevzuat Yönetimi', desc: 'Dokümantasyon ve mevzuat uyum danışmanlığı' },
             { title: 'Petrol Sektörü ADR Danışmanlığı', desc: 'Akaryakıt firmaları için özel ADR çözümleri' },
         ],
@@ -65,7 +101,7 @@ const detailedServices = [
             { label: 'Uzman', value: 'TMGD Belgeli' },
         ]
     },
-    // 4. Tank ve Basınçlı Kap İmalatı (YENİ)
+    // 4. Tank ve Basınçlı Kap İmalatı
     {
         id: 'tank-imalat',
         icon: 'factory',
@@ -86,7 +122,11 @@ const detailedServices = [
             { label: 'Garanti', value: 'Üretici Garantili' },
         ]
     },
-    // 5. Kaynak Mühendisliği (Mevcut + Kaynak Belgelendirme)
+]
+
+// Endüstriyel & Sanayi Hizmetleri Kategorisi
+const industrialServices = [
+    // 5. Kaynak Mühendisliği
     {
         id: 'kaynak',
         icon: 'precision_manufacturing',
@@ -107,14 +147,14 @@ const detailedServices = [
             { label: 'Akreditasyon', value: 'Uluslararası' },
         ]
     },
-    // 6. 13094 Danışmanlığı (Mevcut)
+    // 6. 13094 Danışmanlığı - Mevzuat vurgusu güçlendirildi
     {
         id: '13094',
         icon: 'gavel',
-        badge: 'Danışmanlık',
-        badgeIcon: 'support_agent',
-        title: '13094 Danışmanlığı',
-        description: 'İş Ekipmanlarının Kullanımında Sağlık ve Güvenlik Şartları Yönetmeliği kapsamında zorunlu periyodik kontrol hizmetleri sunuyoruz.',
+        badge: 'Yasal Zorunluluk',
+        badgeIcon: 'balance',
+        title: '13094 Periyodik Kontrol Danışmanlığı',
+        description: '6331 Sayılı İş Sağlığı ve Güvenliği Kanunu kapsamında, İş Ekipmanlarının Kullanımında Sağlık ve Güvenlik Şartları Yönetmeliği gereği zorunlu periyodik kontrolleri gerçekleştiriyoruz. Kontrollerin yapılmaması durumunda idari para cezası ve iş kazası sorumluluğu doğar.',
         features: [
             { title: 'Basınçlı Kaplar', desc: 'Kazanlar, kompresörler, LPG tankları, otoklav cihazları' },
             { title: 'Kaldırma-İletme Ekipmanları', desc: 'Vinçler, forkliftler, asansörler, yük asansörleri' },
@@ -122,13 +162,14 @@ const detailedServices = [
             { title: 'Elektriksel Güvenlik', desc: 'Topraklama testleri, izolasyon ölçümleri, paratoner kontrolleri' },
         ],
         specs: [
-            { label: 'Yasal Zorunluluk', value: '6331 Sayılı Kanun' },
+            { label: 'Yasal Dayanak', value: '6331 Sayılı Kanun' },
             { label: 'Tebliğ No', value: '13094' },
-            { label: 'Kontrol Periyodu', value: 'Yıllık / 3-5 Yıl' },
+            { label: 'Yaptırım', value: 'İdari Para Cezası' },
             { label: 'Akreditasyon', value: 'TÜRKAK' },
-        ]
+        ],
+        warning: 'Periyodik kontrolün yapılmaması halinde 6331 Sayılı Kanun kapsamında idari para cezası uygulanır ve olası iş kazalarında işveren sorumlu tutulur.'
     },
-    // 7. EN 15085 Demiryolu / ISO Belgelendirme (Mevcut)
+    // 7. EN 15085 Demiryolu
     {
         id: 'demiryolu',
         icon: 'train',
@@ -149,14 +190,14 @@ const detailedServices = [
             { label: 'Geçerlilik', value: '3 Yıl' },
         ]
     },
-    // 8. Periyodik Muayene (Mevcut)
+    // 8. Periyodik Muayene - Mevzuat vurgusu güçlendirildi
     {
         id: 'periyodik',
         icon: 'calendar_month',
         badge: 'Periyodik Kontrol',
         badgeIcon: 'schedule',
         title: 'Periyodik Muayene Hizmetleri',
-        description: 'Endüstriyel ekipmanların güvenli çalışması için zorunlu periyodik kontrol ve raporlama hizmetleri.',
+        description: '6331 Sayılı İSG Kanunu ve ilgili yönetmelikler kapsamında, endüstriyel ekipmanların güvenli çalışması için zorunlu periyodik kontrol ve raporlama hizmetleri. Yerinde muayene için mobil ekibimiz tüm Türkiye\'de hizmet vermektedir.',
         features: [
             { title: 'Kaldırma Ekipmanları', desc: 'Vinçler, forkliftler, platform asansörleri kontrolleri' },
             { title: 'Basınçlı Kaplar', desc: 'Kazanlar, kompresörler, tanklar periyodik muayenesi' },
@@ -167,10 +208,11 @@ const detailedServices = [
             { label: 'Standart', value: 'ISO 17020' },
             { label: 'Mevzuat', value: '6331 Sayılı Kanun' },
             { label: 'Periyot', value: 'Yıllık' },
-            { label: 'Akreditasyon', value: 'TÜRKAK' },
-        ]
+            { label: 'Hizmet', value: 'Yerinde Muayene' },
+        ],
+        badge2: 'Mobil Ekip'
     },
-    // 9. Kalite Kontrol ve Belgelendirme (NDT + Tahribatlı Birleşik)
+    // 9. Kalite Kontrol ve Belgelendirme - NDT kullanım alanları eklendi
     {
         id: 'kalite-kontrol',
         icon: 'verified',
@@ -189,16 +231,17 @@ const detailedServices = [
             { label: 'Lab Akreditasyon', value: 'ISO 17025' },
             { label: 'Personel', value: 'Level II & III' },
             { label: 'Akreditasyon', value: 'TÜRKAK' },
-        ]
+        ],
+        usageAreas: ['Tank Kaynakları', 'Basınçlı Kaplar', 'Çelik Konstrüksiyon', 'Demiryolu', 'İmalat Sonrası Kontrol']
     },
-    // 10. Denetim ve Gözetim Hizmetleri (YENİ - Inspection)
+    // 10. Denetim ve Gözetim Hizmetleri
     {
         id: 'denetim',
         icon: 'policy',
         badge: 'Inspection',
         badgeIcon: 'verified_user',
         title: 'Özel Denetim ve Gözetim Hizmetleri',
-        description: 'Siparişleriniz ve projeleriniz için özelleştirilmiş denetim ve gözetim çözümleri sunuyoruz.',
+        description: 'Siparişleriniz ve projeleriniz için özelleştirilmiş denetim ve gözetim çözümleri sunuyoruz. Saha ekiplerimiz yerinde denetim için tüm Türkiye\'de hizmet vermektedir.',
         features: [
             { title: 'Ürüne Özel Denetim', desc: 'Her türlü ürün için özel kalite kontrol hizmetleri' },
             { title: 'Firmaya Özel Gözetim', desc: 'Özelleştirilmiş gözetim programları' },
@@ -210,9 +253,10 @@ const detailedServices = [
             { label: 'Hizmet', value: 'Özelleştirilebilir' },
             { label: 'Raporlama', value: 'Detaylı' },
             { label: 'Takip', value: 'Anlık' },
-        ]
+        ],
+        badge2: 'Saha Ekibi'
     },
-    // 11. Kalibrasyon Hizmetleri (YENİ)
+    // 11. Kalibrasyon Hizmetleri
     {
         id: 'kalibrasyon',
         icon: 'tune',
@@ -233,7 +277,7 @@ const detailedServices = [
             { label: 'Takip', value: 'Periyodik' },
         ]
     },
-    // 12. Gelişmiş NDT (Mevcut)
+    // 12. Gelişmiş NDT - Kullanım alanları eklendi
     {
         id: 'gelismis-ndt',
         icon: 'view_in_ar',
@@ -252,10 +296,176 @@ const detailedServices = [
             { label: 'Teknoloji', value: 'Dijital' },
             { label: 'Hassasiyet', value: 'Yüksek' },
             { label: 'Raporlama', value: 'Anlık' },
-        ]
+        ],
+        usageAreas: ['Tank Kaynakları', 'Boru Hatları', 'Basınçlı Kaplar', 'Demiryolu Aksam', 'Uçak Parçaları']
     },
 ]
 
+// ADR Süreç Akışı Bileşeni
+function ADRProcessFlow() {
+    return (
+        <section className="py-20 bg-[#1a1a1a] border-y border-[#333]">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12">
+                    <Badge className="mb-4">
+                        <span className="material-symbols-outlined text-sm">route</span>
+                        Süreç Akışı
+                    </Badge>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        ADR Muayenesi Nasıl İlerler?
+                    </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto">
+                        Tankınız bize geldiğinde, şeffaf ve sistematik bir süreçle muayenesini gerçekleştiriyoruz.
+                    </p>
+                </div>
+
+                {/* Timeline */}
+                <div className="relative">
+                    {/* Desktop Timeline Line */}
+                    <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        {adrProcessSteps.map((step, index) => (
+                            <div key={index} className="relative flex flex-col items-center text-center group">
+                                {/* Step Number */}
+                                <div className="relative z-10 w-16 h-16 rounded-full bg-primary flex items-center justify-center text-background-dark font-bold text-xl shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
+                                    {step.step}
+                                </div>
+
+                                {/* Content */}
+                                <div className="mt-6 p-4 bg-surface-dark rounded-xl border border-[#333] group-hover:border-primary/50 transition-colors w-full">
+                                    <span className="material-symbols-outlined text-primary text-2xl mb-2">{step.icon}</span>
+                                    <h4 className="text-white font-bold mb-2">{step.title}</h4>
+                                    <p className="text-gray-400 text-sm mb-3">{step.desc}</p>
+                                    <div className="inline-flex items-center gap-1 text-primary text-xs font-semibold bg-primary/10 px-3 py-1 rounded-full">
+                                        <span className="material-symbols-outlined text-sm">schedule</span>
+                                        {step.duration}
+                                    </div>
+                                </div>
+
+                                {/* Connector Arrow (Mobile) */}
+                                {index < adrProcessSteps.length - 1 && (
+                                    <div className="lg:hidden mt-4">
+                                        <span className="material-symbols-outlined text-primary text-2xl">arrow_downward</span>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* CTA */}
+                <div className="mt-12 text-center">
+                    <p className="text-gray-300 mb-4">
+                        Ortalama süre: <span className="text-primary font-bold">5-7 iş günü</span>
+                    </p>
+                    <Button to="/iletisim" size="lg">
+                        <span>Randevu Alın</span>
+                        <span className="material-symbols-outlined">calendar_month</span>
+                    </Button>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+// Standartlar Bölümü Bileşeni
+function StandardsSection() {
+    const [activeTab, setActiveTab] = useState('adr')
+
+    const tabs = [
+        { id: 'adr', label: 'ADR & Tank', icon: 'local_shipping' },
+        { id: 'welding', label: 'Kaynak', icon: 'precision_manufacturing' },
+        { id: 'ndt', label: 'NDT', icon: 'visibility' },
+        { id: 'regulation', label: 'Mevzuat', icon: 'gavel' },
+    ]
+
+    return (
+        <section className="py-20 bg-surface-dark border-b border-[#333]">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12">
+                    <Badge className="mb-4">
+                        <span className="material-symbols-outlined text-sm">verified</span>
+                        Akreditasyon
+                    </Badge>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Çalıştığımız Standartlar & Mevzuat
+                    </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto">
+                        Tüm hizmetlerimiz ulusal ve uluslararası standartlara uygun olarak gerçekleştirilmektedir.
+                    </p>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex flex-wrap justify-center gap-2 mb-10">
+                    {tabs.map((tab) => (
+                        <button
+                            key={tab.id}
+                            onClick={() => setActiveTab(tab.id)}
+                            className={`flex items-center gap-2 px-5 py-3 rounded-lg font-medium transition-all ${activeTab === tab.id
+                                ? 'bg-primary text-background-dark shadow-lg shadow-primary/20'
+                                : 'bg-background-dark border border-[#333] text-gray-300 hover:text-white hover:border-primary/50'
+                                }`}
+                        >
+                            <span className="material-symbols-outlined text-lg">{tab.icon}</span>
+                            {tab.label}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Standards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {standardsData[activeTab].map((standard, index) => (
+                        <div
+                            key={index}
+                            className="p-5 bg-background-dark rounded-xl border border-[#333] hover:border-primary/50 transition-colors group"
+                        >
+                            <div className="text-primary font-bold text-2xl mb-1 group-hover:scale-110 transition-transform inline-block">
+                                {standard.code}
+                            </div>
+                            <div className="text-white font-semibold text-sm mb-2">{standard.name}</div>
+                            <p className="text-gray-500 text-xs">{standard.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
+
+// Kategori Tab Bileşeni
+function ServiceCategoryTabs({ activeCategory, setActiveCategory }) {
+    return (
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <button
+                onClick={() => setActiveCategory('adr')}
+                className={`flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-lg transition-all ${activeCategory === 'adr'
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg shadow-orange-500/30'
+                    : 'bg-surface-dark border border-[#333] text-gray-300 hover:text-white hover:border-orange-500/50'
+                    }`}
+            >
+                <span className="material-symbols-outlined text-2xl">local_shipping</span>
+                <div className="text-left">
+                    <div>ADR & Tehlikeli Madde</div>
+                    <div className="text-xs font-normal opacity-80">Muayene • Tamirat • Danışmanlık</div>
+                </div>
+            </button>
+            <button
+                onClick={() => setActiveCategory('industrial')}
+                className={`flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-lg transition-all ${activeCategory === 'industrial'
+                    ? 'bg-gradient-to-r from-primary to-yellow-500 text-background-dark shadow-lg shadow-primary/30'
+                    : 'bg-surface-dark border border-[#333] text-gray-300 hover:text-white hover:border-primary/50'
+                    }`}
+            >
+                <span className="material-symbols-outlined text-2xl">factory</span>
+                <div className="text-left">
+                    <div>Endüstriyel & Sanayi</div>
+                    <div className="text-xs font-normal opacity-80">Periyodik • NDT • Belgelendirme</div>
+                </div>
+            </button>
+        </div>
+    )
+}
 
 // Hizmet Detay Kartı Bileşeni
 function ServiceDetailCard({ service, reverse = false }) {
@@ -264,16 +474,47 @@ function ServiceDetailCard({ service, reverse = false }) {
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
                     <div className={reverse ? 'lg:order-2' : ''}>
-                        <Badge className="mb-4">
-                            <span className="material-symbols-outlined text-sm">{service.badgeIcon}</span>
-                            {service.badge}
-                        </Badge>
+                        <div className="flex items-center gap-2 mb-4">
+                            <Badge>
+                                <span className="material-symbols-outlined text-sm">{service.badgeIcon}</span>
+                                {service.badge}
+                            </Badge>
+                            {service.badge2 && (
+                                <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
+                                    <span className="material-symbols-outlined text-sm">directions_car</span>
+                                    {service.badge2}
+                                </Badge>
+                            )}
+                        </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                             {service.title}
                         </h2>
                         <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                             {service.description}
                         </p>
+
+                        {/* Warning Box for 13094 */}
+                        {service.warning && (
+                            <div className="mb-6 p-4 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-start gap-3">
+                                <span className="material-symbols-outlined text-orange-400 mt-0.5">warning</span>
+                                <p className="text-orange-300 text-sm">{service.warning}</p>
+                            </div>
+                        )}
+
+                        {/* Usage Areas for NDT */}
+                        {service.usageAreas && (
+                            <div className="mb-6">
+                                <p className="text-gray-400 text-sm mb-2 font-semibold">Kullanım Alanları:</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {service.usageAreas.map((area, idx) => (
+                                        <span key={idx} className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">
+                                            {area}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
                         <div className="space-y-4 mb-8">
                             {service.features.map((feature, index) => (
                                 <div key={index} className="flex items-start gap-3">
@@ -316,6 +557,10 @@ function ServiceDetailCard({ service, reverse = false }) {
 }
 
 export default function Services() {
+    const [activeCategory, setActiveCategory] = useState('adr')
+
+    const currentServices = activeCategory === 'adr' ? adrServices : industrialServices
+
     return (
         <div className="animate-fade-in">
             {/* Hero */}
@@ -336,8 +581,25 @@ export default function Services() {
                 </div>
             </section>
 
-            {/* All Services with Detailed Cards */}
-            {detailedServices.map((service, index) => (
+            {/* Standards Section */}
+            <StandardsSection />
+
+            {/* Category Tabs */}
+            <section className="py-12 bg-background-dark">
+                <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-8">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Hizmet Kategorisi Seçin</h2>
+                        <p className="text-gray-400">İhtiyacınıza uygun hizmet grubunu seçerek detaylara ulaşın.</p>
+                    </div>
+                    <ServiceCategoryTabs activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+                </div>
+            </section>
+
+            {/* ADR Process Flow - Only show for ADR category */}
+            {activeCategory === 'adr' && <ADRProcessFlow />}
+
+            {/* Services with Detailed Cards */}
+            {currentServices.map((service, index) => (
                 <ServiceDetailCard
                     key={service.id}
                     service={service}

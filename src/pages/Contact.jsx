@@ -193,7 +193,7 @@ export default function Contact() {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-300" htmlFor="subject">Konu</label>
+                                        <label className="text-sm font-medium text-gray-300" htmlFor="subject">Hizmet Türü</label>
                                         <select
                                             className="w-full h-12 rounded-lg border border-[#333] bg-[#1e1b12] text-white px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all cursor-pointer"
                                             id="subject"
@@ -203,11 +203,25 @@ export default function Contact() {
                                             required
                                         >
                                             <option disabled value="">Seçiniz</option>
-                                            <option value="quote">Fiyat Teklifi</option>
-                                            <option value="support">Teknik Destek</option>
-                                            <option value="consulting">Danışmanlık</option>
-                                            <option value="13094">13094 Danışmanlığı</option>
-                                            <option value="other">Diğer</option>
+                                            <optgroup label="🚛 ADR & Tehlikeli Madde">
+                                                <option value="adr-muayene">ADR Tank Muayenesi</option>
+                                                <option value="adr-tamirat">ADR Tamirat & Tadilat</option>
+                                                <option value="adr-danismanlik">ADR Güvenlik Danışmanlığı</option>
+                                                <option value="tank-imalat">Tank İmalatı</option>
+                                            </optgroup>
+                                            <optgroup label="🏭 Endüstriyel & Sanayi">
+                                                <option value="13094">13094 Periyodik Kontrol</option>
+                                                <option value="periyodik">Periyodik Muayene</option>
+                                                <option value="ndt">NDT Hizmetleri</option>
+                                                <option value="kaynak">Kaynak Mühendisliği / Sertifikasyon</option>
+                                                <option value="kalibrasyon">Kalibrasyon</option>
+                                                <option value="denetim">Denetim & Gözetim</option>
+                                            </optgroup>
+                                            <optgroup label="📋 Genel">
+                                                <option value="quote">Genel Fiyat Teklifi</option>
+                                                <option value="support">Teknik Destek</option>
+                                                <option value="other">Diğer</option>
+                                            </optgroup>
                                         </select>
                                     </div>
                                 </div>

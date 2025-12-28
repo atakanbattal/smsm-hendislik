@@ -27,7 +27,14 @@ const galleryItems = [
     { src: '/images/gallery-periyodik.png', title: 'Endüstriyel Tesis Denetimi', category: 'Periyodik Kontrol', aspect: 'aspect-[3/4]' },
 ]
 
-const categories = ['Tümü', 'Kaynak Mühendisliği', 'ADR & Tanker', 'Basınçlı Kaplar', 'NDT Hizmetleri', 'Demiryolu']
+const categories = [
+    { id: 'Tümü', desc: 'Tüm proje ve hizmet fotoğraflarımız' },
+    { id: 'Kaynak Mühendisliği', desc: 'WPS/WPQR, kaynakçı sertifikasyonu ve kaynaklı imalat' },
+    { id: 'ADR & Tanker', desc: 'Tehlikeli madde tankları muayene ve tamirat işlemleri' },
+    { id: 'Basınçlı Kaplar', desc: 'Kazanlar, kompresörler ve basınçlı sistemlerin kontrolü' },
+    { id: 'NDT Hizmetleri', desc: 'Ultrasonik, radyografik ve diğer tahribatsız testler' },
+    { id: 'Demiryolu', desc: 'EN 15085 kapsamında demiryolu araç imalat ve bakımı' },
+]
 
 export default function Gallery() {
     const [activeCategory, setActiveCategory] = useState('Tümü')
@@ -64,21 +71,25 @@ export default function Gallery() {
             <section className="py-12 bg-background-dark">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-8">
                     {/* Filter Chips */}
-                    <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
-                        <div className="flex gap-2 flex-wrap justify-center md:justify-start">
+                    <div className="flex flex-col items-center mb-10 gap-6">
+                        <div className="flex gap-2 flex-wrap justify-center">
                             {categories.map((cat) => (
                                 <button
-                                    key={cat}
-                                    onClick={() => setActiveCategory(cat)}
-                                    className={`flex h-9 items-center justify-center px-5 rounded-full transition-all ${activeCategory === cat
+                                    key={cat.id}
+                                    onClick={() => setActiveCategory(cat.id)}
+                                    className={`flex h-9 items-center justify-center px-5 rounded-full transition-all ${activeCategory === cat.id
                                         ? 'bg-primary text-background-dark shadow-lg shadow-primary/20'
                                         : 'bg-surface-dark border border-[#333] text-gray-300 hover:text-white hover:border-primary/50'
                                         }`}
                                 >
-                                    <span className="text-sm font-medium">{cat}</span>
+                                    <span className="text-sm font-medium">{cat.id}</span>
                                 </button>
                             ))}
                         </div>
+                        {/* Category Description */}
+                        <p className="text-gray-500 text-sm text-center max-w-md">
+                            {categories.find(c => c.id === activeCategory)?.desc}
+                        </p>
                     </div>
 
                     {/* Gallery Grid */}

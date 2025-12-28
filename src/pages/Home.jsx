@@ -291,6 +291,102 @@ export default function Home() {
                 </section>
             ))}
 
+            {/* Neden Biz Section */}
+            <section className="py-20 bg-[#0f0f0f] relative overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
+                    <div className="absolute -right-40 -top-40 w-[500px] h-[500px] bg-primary rounded-full blur-[150px]"></div>
+                    <div className="absolute -left-40 -bottom-40 w-[400px] h-[400px] bg-white rounded-full blur-[150px]"></div>
+                </div>
+                <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="text-center mb-16">
+                        <Badge className="mb-4">
+                            <span className="material-symbols-outlined text-sm">emoji_events</span>
+                            Farkımız
+                        </Badge>
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                            Neden <span className="text-primary">SMS İnovasyon?</span>
+                        </h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                            Sektörde fark yaratan avantajlarımızla projelerinizin başarısını garanti altına alıyoruz.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {/* TSE Eşliğinde Muayene */}
+                        <div className="group relative p-6 bg-gradient-to-br from-slate-metallic to-surface-dark rounded-2xl border border-[#333] hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-bl-full"></div>
+                            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all">
+                                <span className="material-symbols-outlined text-primary text-2xl group-hover:text-background-dark">verified</span>
+                            </div>
+                            <h3 className="text-white font-bold text-xl mb-3">TSE Eşliğinde Muayene</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                TSE Tehlikeli Madde Müdürlüğü ve Bakanlık onaylı yetkili muayene merkezi olarak resmi belgelendirme yapıyoruz.
+                            </p>
+                            <div className="mt-4 flex items-center gap-2 text-primary text-xs font-semibold">
+                                <span className="material-symbols-outlined text-sm">workspace_premium</span>
+                                Resmi Onaylı
+                            </div>
+                        </div>
+
+                        {/* Tecrübeli Mühendis Kadro */}
+                        <div className="group relative p-6 bg-gradient-to-br from-slate-metallic to-surface-dark rounded-2xl border border-[#333] hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-bl-full"></div>
+                            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all">
+                                <span className="material-symbols-outlined text-primary text-2xl group-hover:text-background-dark">engineering</span>
+                            </div>
+                            <h3 className="text-white font-bold text-xl mb-3">Tecrübeli Mühendis Kadro</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Sahada 10+ yıl deneyime sahip, Level III NDT sertifikalı ve EN 15085 uzmanı mühendislerimizle hizmet veriyoruz.
+                            </p>
+                            <div className="mt-4 flex items-center gap-2 text-primary text-xs font-semibold">
+                                <span className="material-symbols-outlined text-sm">school</span>
+                                Level III Sertifikalı
+                            </div>
+                        </div>
+
+                        {/* Tek Merkezden Hizmet */}
+                        <div className="group relative p-6 bg-gradient-to-br from-slate-metallic to-surface-dark rounded-2xl border border-[#333] hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-bl-full"></div>
+                            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all">
+                                <span className="material-symbols-outlined text-primary text-2xl group-hover:text-background-dark">hub</span>
+                            </div>
+                            <h3 className="text-white font-bold text-xl mb-3">Tek Merkezden Hizmet</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Muayene, tamirat, danışmanlık ve belgelendirme hizmetlerini tek çatı altında sunarak süreçlerinizi hızlandırıyoruz.
+                            </p>
+                            <div className="mt-4 flex items-center gap-2 text-primary text-xs font-semibold">
+                                <span className="material-symbols-outlined text-sm">speed</span>
+                                Hızlı Süreç
+                            </div>
+                        </div>
+
+                        {/* Evrak & Mevzuat Takibi */}
+                        <div className="group relative p-6 bg-gradient-to-br from-slate-metallic to-surface-dark rounded-2xl border border-[#333] hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-bl-full"></div>
+                            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all">
+                                <span className="material-symbols-outlined text-primary text-2xl group-hover:text-background-dark">folder_managed</span>
+                            </div>
+                            <h3 className="text-white font-bold text-xl mb-3">Evrak & Mevzuat Takibi</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Muayene tarihlerinizi takip ediyor, hatırlatmalar yapıyor ve tüm dokümantasyon süreçlerinizi yönetiyoruz.
+                            </p>
+                            <div className="mt-4 flex items-center gap-2 text-primary text-xs font-semibold">
+                                <span className="material-symbols-outlined text-sm">notifications_active</span>
+                                Otomatik Hatırlatma
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bottom CTA */}
+                    <div className="mt-12 text-center">
+                        <Button to="/hakkimizda" variant="outline" size="lg">
+                            <span>Hakkımızda Daha Fazla</span>
+                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
             {/* Stats Section */}
             <section className="py-16 bg-slate-metallic border-y border-[#333]">
                 <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,16 +2,23 @@ import { Link } from 'react-router-dom'
 import { Button, ServiceCard, Badge } from '../components/ui/Components'
 
 const services = [
-    { icon: 'calendar_month', title: 'Periyodik Muayene', description: 'Endüstriyel kaldırma ekipmanları, basınçlı kaplar ve makineler için kapsamlı güvenlik kontrolleri ve raporlama.', tag: 'ISO 17020' },
-    { icon: 'visibility', title: 'Tahribatsız Muayene', description: 'Malzeme hasarı olmaksızın kusur tespiti için standart Tahribatsız Muayene (UT, MT, PT, RT).', tag: 'ISO 9712' },
-    { icon: 'view_in_ar', title: 'Gelişmiş NDT', description: 'Kritik yapısal analizler için TOFD, Phased Array ve Dijital Radyografi dahil yüksek teknoloji yöntemler.', tag: 'ISO 13588' },
-    { icon: 'science', title: 'Tahribatlı Muayene', description: 'Çekme mukavemeti, darbe, sertlik ve bükme test hizmetleri ile malzeme özelliklerinin doğrulanması.', tag: 'EN ISO 148' },
-    { icon: 'precision_manufacturing', title: 'Mühendislik Hizmetleri', description: 'Kaynak mühendisliği danışmanlığı, teknik şartname hazırlama ve proje yönetimi hizmetleri.', tag: 'EN 15085' },
-    { icon: 'badge', title: 'Personel Belgelendirme', description: 'NDT personeli ve teknik elemanlar için uluslararası standartlara uygun akredite belgelendirme hizmetleri.', tag: 'ISO 9712' },
-    { icon: 'verified_user', title: 'Kaynakçı Sertifikalandırma', description: 'EN 9606 standardına uygun olarak kaynakçıların teorik ve pratik sınavlarla sertifikalandırılması.', tag: 'EN 9606' },
-    { icon: 'local_shipping', title: 'ADR Tank Muayeneleri', description: 'Tehlikeli madde taşıma tankları ve emniyet valfleri için sertifikalı mevzuat muayeneleri.', tag: 'ADR 2023' },
-    { icon: 'gavel', title: '13094 Danışmanlığı', description: 'İş Ekipmanlarının Kullanımında Sağlık ve Güvenlik Şartları Yönetmeliği kapsamında periyodik kontrol danışmanlığı.', tag: '13094 Tebliği' },
+    // ADR ve Tehlikeli Madde Hizmetleri
+    { icon: 'local_shipping', title: 'ADR Yetkili Muayene', description: 'TSE ve Bakanlık onaylı ADR muayene merkezi. T9, ara, periyodik ve istisnai muayeneler.', tag: 'TSE Onaylı', category: 'adr' },
+    { icon: 'build', title: 'Tamirat & Tadilat', description: 'ADR onaylı araç tamiratları, üst yapı onarımları ve yönetmeliğe uygun modifikasyonlar.', tag: 'ADR Onaylı', category: 'adr' },
+    { icon: 'shield', title: 'Güvenlik Danışmanlığı', description: 'ADR/RID tehlikeli madde taşımacılık danışmanlığı ve mevzuat uyum hizmetleri.', tag: 'TMGD', category: 'adr' },
+    { icon: 'factory', title: 'Tank İmalatı', description: 'ADR\'li ve ADR\'siz tank/treyler üretimi, araç üstü tank sistemleri.', tag: 'İmalat', category: 'adr' },
+    // Mühendislik ve Kaynak Hizmetleri
+    { icon: 'precision_manufacturing', title: 'Kaynak Mühendisliği', description: 'WPS/PQR hazırlama, kaynakçı sertifikasyonu ve çelik/alüminyum kaynak imalatı.', tag: 'EN 15085', category: 'engineering' },
+    { icon: 'train', title: 'EN 15085 Demiryolu', description: 'Demiryolu araçları için kaynaklı imalat danışmanlığı ve CL1-CL4 sertifikasyonu.', tag: 'CL1-CL4', category: 'engineering' },
+    { icon: 'gavel', title: '13094 Danışmanlığı', description: 'İş ekipmanları periyodik kontrol danışmanlığı. Basınçlı kaplar, kaldırma ekipmanları.', tag: '6331 Kanun', category: 'engineering' },
+    // Muayene ve Test Hizmetleri
+    { icon: 'calendar_month', title: 'Periyodik Muayene', description: 'Kaldırma ekipmanları, basınçlı kaplar ve iş makineleri periyodik kontrolleri.', tag: 'ISO 17020', category: 'inspection' },
+    { icon: 'verified', title: 'Kalite Kontrol', description: 'NDT ve tahribatlı muayene hizmetleri. VT, UT, MT, RT, PT testleri.', tag: 'ISO 9712', category: 'inspection' },
+    { icon: 'policy', title: 'Denetim & Gözetim', description: 'Ürüne özel denetimler, sipariş takibi ve tedarikçi kalite güvence denetimleri.', tag: 'Inspection', category: 'inspection' },
+    { icon: 'tune', title: 'Kalibrasyon', description: 'Kaynak makinası, ölçü aletleri, manometre ve debimetre kalibrasyonu.', tag: 'TÜRKAK', category: 'inspection' },
+    { icon: 'view_in_ar', title: 'Gelişmiş NDT', description: 'PAUT, TOFD, Dijital Radyografi ve Girdap Akımı Testi ile hassas analiz.', tag: 'ISO 13588', category: 'inspection' },
 ]
+
 
 const stats = [
     { value: '10+', label: 'Yıllık Tecrübe' },
@@ -28,65 +35,66 @@ const certifications = [
     { name: 'ADR', sub: 'CERTIFIED' },
 ]
 
-// Uzmanlık alanları
+// Uzmanlık alanları - PRD'den güncellenmiş
 const expertiseAreas = [
     {
-        id: 'kaynak',
-        title: 'Kaynaklı İmalat',
-        subtitle: 'Mühendislik Çözümleri',
-        description: 'EN 15085 ve ISO 3834 standartlarına uygun kaynaklı imalat danışmanlığı. WPS/WPQR hazırlama, kaynakçı sertifikalandırma ve kalite kontrol hizmetleri.',
-        icon: 'precision_manufacturing',
-        badge: 'EN 15085',
-        badgeText: 'CL1-CL4 Sertifikalı',
+        id: 'adr-merkez',
+        title: 'ADR Yetkili Muayene Merkezi',
+        subtitle: 'TSE & Bakanlık Onaylı',
+        description: 'Ulaştırma ve Altyapı Bakanlığı ile TSE Tehlikeli Madde Taşımacılık Müdürlüğü onaylı merkezimizde akaryakıt, asfalt ve kimyasal madde taşıyan tanklar için tüm muayene hizmetlerini sunuyoruz.',
+        icon: 'local_shipping',
+        badge: 'ADR 2023',
+        badgeText: 'Resmi Yetkili Merkez',
         features: [
-            { icon: 'verified', title: 'WPS/WPQR Hazırlama', desc: 'Kaynak prosedür şartnameleri ve onay raporları' },
-            { icon: 'engineering', title: 'Kaynakçı Sertifikasyonu', desc: 'EN 9606 standardına uygun belgelendirme' },
+            { icon: 'verified', title: 'T9 & Periyodik Muayeneler', desc: 'Yıllık, 3 yıllık ve 6 yıllık zorunlu kontroller' },
+            { icon: 'build', title: 'Tamirat & Tadilat Merkezi', desc: 'ADR onaylı araç onarım ve modifikasyon' },
+        ],
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    },
+    {
+        id: 'tank-imalat',
+        title: 'Tank ve Basınçlı Kap Üretimi',
+        subtitle: 'Endüstriyel İmalat',
+        description: 'ADR\'li ve ADR\'siz tank/treyler üretimi, araç üstü tank sistemleri ve özel tasarım projeler. Standartlara uygun, güvenli ve dayanıklı tank sistemleri üretiyoruz.',
+        icon: 'factory',
+        badge: 'İMALAT',
+        badgeText: 'Üretici Garantili',
+        features: [
+            { icon: 'verified', title: 'ADR\'li Tank İmalatı', desc: 'Tehlikeli madde taşımacılığı için onaylı tanklar' },
+            { icon: 'engineering', title: 'Kaynaklı İmalat', desc: 'Çelik ve alüminyum profesyonel kaynak' },
         ],
         image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80',
     },
     {
-        id: 'adr',
-        title: 'ADR Tank Muayeneleri',
-        subtitle: 'Tehlikeli Madde Taşımacılığı',
-        description: 'ADR mevzuatı kapsamında tehlikeli madde taşıma tankları için zorunlu periyodik muayeneler. Emniyet valfi testleri ve hidrostatik kontroller.',
-        icon: 'local_shipping',
-        badge: 'ADR 2023',
-        badgeText: 'Uluslararası Sertifikalı',
+        id: 'danismanlik',
+        title: 'Güvenlik Danışmanlığı',
+        subtitle: 'TMGD Belgeli Uzmanlar',
+        description: 'ADR/RID uluslararası sözleşmelerine uygun tehlikeli madde taşımacılık danışmanlığı. Nakliye firmalarına araç muayene takibi, dosya yönetimi ve mevzuat uyum hizmetleri.',
+        icon: 'shield',
+        badge: 'TMGD',
+        badgeText: 'Uzman Kadro',
         features: [
-            { icon: 'verified', title: 'Tank Periyodik Kontrol', desc: 'Taşıma tankları yıllık muayenesi' },
-            { icon: 'engineering', title: 'Emniyet Valfi Testleri', desc: 'Basınç tahliye cihazları sertifikasyonu' },
+            { icon: 'verified', title: 'Mevzuat Danışmanlığı', desc: 'ADR/RID uyum ve dokümantasyon' },
+            { icon: 'engineering', title: '13094 Periyodik Kontrol', desc: 'İş ekipmanları yasal zorunluluk takibi' },
         ],
-        image: '/images/adr-inspection.jpg',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
     },
     {
-        id: 'basinc',
-        title: 'Basınçlı Kap Kontrolleri',
-        subtitle: 'Endüstriyel Güvenlik',
-        description: 'Kazanlar, kompresörler, LPG tankları ve basınçlı sistemler için PED direktifine uygun periyodik muayene ve sertifikalandırma hizmetleri.',
-        icon: 'oil_barrel',
-        badge: 'PED 2014/68/EU',
+        id: 'kalite',
+        title: 'Kalite Kontrol & Kalibrasyon',
+        subtitle: 'Akreditasyonlu Laboratuvar',
+        description: 'NDT ve tahribatlı muayene hizmetleri ile akreditasyonlu kalibrasyon laboratuvarımızda tüm ölçüm cihazlarınızın hassasiyetini garanti altına alıyoruz.',
+        icon: 'tune',
+        badge: 'TÜRKAK',
         badgeText: 'Akredite Kuruluş',
         features: [
-            { icon: 'verified', title: 'Hidrostatik Test', desc: 'Basınçlı kap bütünlük testleri' },
-            { icon: 'engineering', title: 'Periyodik Muayene', desc: 'Yasal zorunluluk kontrolleri' },
+            { icon: 'verified', title: 'NDT Testleri', desc: 'VT, UT, MT, RT, PT, PAUT, TOFD' },
+            { icon: 'engineering', title: 'Kalibrasyon Hizmetleri', desc: 'Kaynak makinası, manometre, debimetre' },
         ],
-        image: '/images/pressure-vessel.jpg',
-    },
-    {
-        id: 'demiryolu',
-        title: 'Demiryolu Sistemleri',
-        subtitle: 'EN 15085 Sertifikasyonu',
-        description: 'Demiryolu araçları imalatı ve bakımı için Avrupa standartlarına uygun kaynak kalite yönetimi ve personel yetkilendirme hizmetleri.',
-        icon: 'train',
-        badge: 'EN 15085',
-        badgeText: 'Demiryolu Sertifikalı',
-        features: [
-            { icon: 'verified', title: 'İmalat Denetimi', desc: 'Kaynaklı yapı imalat süreç kontrolü' },
-            { icon: 'engineering', title: 'Personel Yetkilendirme', desc: 'Demiryolu kaynak personeli sertifikasyonu' },
-        ],
-        image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
     },
 ]
+
 
 // Uzmanlık Alanı Bileşeni
 function ExpertiseCard({ area, reverse = false }) {
@@ -178,26 +186,89 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Services Section */}
+            {/* Services Dashboard Section */}
             <section className="py-20 bg-background-dark relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-surface-dark to-transparent opacity-30 pointer-events-none"></div>
                 <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                         <div className="max-w-2xl">
-                            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">Hizmetlerimiz</h2>
-                            <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Özel Mühendislik Hizmetleri</h3>
-                            <p className="mt-4 text-gray-400">Ağır sanayi için özel olarak tasarlanmış mühendislik hizmetleriyle hassasiyet, uyumluluk ve güvenlik sunuyoruz.</p>
+                            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">Hizmet Portföyümüz</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Kapsamlı Mühendislik Çözümleri</h3>
+                            <p className="mt-4 text-gray-400">ADR muayene ve tamirat, tank imalatı, güvenlik danışmanlığı, kalibrasyon ve kalite kontrol hizmetleri tek çatı altında.</p>
                         </div>
                         <Link to="/hizmetler" className="hidden md:flex items-center gap-2 text-primary hover:text-white transition-colors group">
-                            <span className="font-medium">Tüm hizmetleri görüntüle</span>
+                            <span className="font-medium">12 hizmetin tamamını görüntüle</span>
                             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </Link>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {services.slice(0, 9).map((service, index) => (
+
+                    {/* Dashboard Category Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        {/* ADR Hizmetleri */}
+                        <div className="bg-gradient-to-br from-orange-500/10 to-transparent border border-orange-500/30 rounded-xl p-6">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                                    <span className="material-symbols-outlined text-orange-400 text-2xl">local_shipping</span>
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold">ADR Hizmetleri</h4>
+                                    <p className="text-orange-400 text-sm font-medium">4 Hizmet</p>
+                                </div>
+                            </div>
+                            <ul className="space-y-2 text-sm text-gray-300">
+                                <li className="flex items-center gap-2"><span className="text-orange-400">●</span> Yetkili Muayene Merkezi</li>
+                                <li className="flex items-center gap-2"><span className="text-orange-400">●</span> Tamirat & Tadilat</li>
+                                <li className="flex items-center gap-2"><span className="text-orange-400">●</span> Güvenlik Danışmanlığı</li>
+                                <li className="flex items-center gap-2"><span className="text-orange-400">●</span> Tank İmalatı</li>
+                            </ul>
+                        </div>
+
+                        {/* Mühendislik Hizmetleri */}
+                        <div className="bg-gradient-to-br from-blue-500/10 to-transparent border border-blue-500/30 rounded-xl p-6">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                                    <span className="material-symbols-outlined text-blue-400 text-2xl">engineering</span>
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold">Mühendislik</h4>
+                                    <p className="text-blue-400 text-sm font-medium">3 Hizmet</p>
+                                </div>
+                            </div>
+                            <ul className="space-y-2 text-sm text-gray-300">
+                                <li className="flex items-center gap-2"><span className="text-blue-400">●</span> Kaynak Mühendisliği</li>
+                                <li className="flex items-center gap-2"><span className="text-blue-400">●</span> EN 15085 Demiryolu</li>
+                                <li className="flex items-center gap-2"><span className="text-blue-400">●</span> 13094 Danışmanlığı</li>
+                            </ul>
+                        </div>
+
+                        {/* Muayene & Test */}
+                        <div className="bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/30 rounded-xl p-6">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                                    <span className="material-symbols-outlined text-emerald-400 text-2xl">science</span>
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold">Muayene & Test</h4>
+                                    <p className="text-emerald-400 text-sm font-medium">5 Hizmet</p>
+                                </div>
+                            </div>
+                            <ul className="space-y-2 text-sm text-gray-300">
+                                <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> Periyodik Muayene</li>
+                                <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> Kalite Kontrol & NDT</li>
+                                <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> Denetim & Gözetim</li>
+                                <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> Kalibrasyon</li>
+                                <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> Gelişmiş NDT</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* All Services Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {services.map((service, index) => (
                             <ServiceCard key={index} {...service} />
                         ))}
                     </div>
+
                     <div className="md:hidden mt-8 text-center">
                         <Link to="/hizmetler" className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors">
                             <span className="font-medium">Tüm hizmetleri görüntüle</span>
@@ -206,6 +277,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
 
             {/* Expertise Areas - 4 Sections */}
             {expertiseAreas.map((area, index) => (
